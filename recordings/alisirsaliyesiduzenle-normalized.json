@@ -1,0 +1,622 @@
+{
+  "schemaVersion": "1.0",
+  "dslVersion": "1.0",
+  "source": {
+    "targetUrl": "https://testotomasyon.univera.com.tr:8350/",
+    "recordedAt": "2026-05-09T13:25:10.746Z",
+    "totalActions": 54
+  },
+  "stats": {
+    "sanitizedActions": 54,
+    "normalizedActions": 52,
+    "droppedNoiseActions": 2,
+    "totalSteps": 64,
+    "droppedNoiseSteps": 11
+  },
+  "selectorPolicy": "id > data-* > css > xpath",
+  "lookupHints": [],
+  "detailEditorHints": [],
+  "detailCommitHints": [
+    {
+      "ownerContext": {
+        "windowLabel": "popup-2",
+        "frameChain": "main"
+      },
+      "okButtonSelector": "#DCC_DetGrd_RT_DCC_DetGrdBtnOK",
+      "rowProofSelector": "#DCC_DetGrd_R0 > th",
+      "editorInputSelector": "#DCC_DetGrd_RT_edtDetMik_NBE_t",
+      "editorContainerSelector": "#DCC_DetGrd_RT_TBL",
+      "recommendedProofs": [
+        {
+          "selector": "#DCC_DetGrd_R0 > th",
+          "state": "visible",
+          "role": "rowProof"
+        },
+        {
+          "selector": "#DCC_DetGrd_RT_DCC_DetGrdBtnOK",
+          "state": "hidden",
+          "role": "okButtonClosed"
+        },
+        {
+          "selector": "#DCC_DetGrd_RT_edtDetMik_NBE_t",
+          "state": "hidden",
+          "role": "editorInputClosed"
+        },
+        {
+          "selector": "#DCC_DetGrd_RT_TBL",
+          "state": "hidden",
+          "role": "editorClosed"
+        }
+      ],
+      "fromStep": {
+        "clickTimestamp": 1778333086591
+      }
+    }
+  ],
+  "saveCloseHints": [
+    {
+      "ownerContext": {
+        "windowLabel": "popup-2",
+        "frameChain": "main"
+      },
+      "saveButtonSelector": "#MainNvgxToolbar_Item_1 > span",
+      "closeButtonSelector": "#MainNvgxToolbar_Item_0 > span",
+      "combined": false,
+      "fromSteps": {
+        "saveClickTimestamp": 1778333090462,
+        "closeClickTimestamp": 1778333097438
+      }
+    }
+  ],
+  "popupLineage": [
+    {
+      "popupLabel": "popup-1",
+      "openedBy": null,
+      "firstSeenUrl": "https://testotomasyon.univera.com.tr:8350/"
+    },
+    {
+      "popupLabel": "popup-2",
+      "openedBy": {
+        "windowLabel": "main",
+        "frameChain": "mainRTL",
+        "selector": "#NvgxToolbar_Item_2 > span",
+        "timestamp": 1778333049783
+      },
+      "firstSeenUrl": "https://testotomasyon.univera.com.tr:8350/Interface/Anamenu/LayoutComponents/Comminication/NotificationData.ashx?SA=1&t=1778333051553"
+    }
+  ],
+  "frameMarkers": {
+    "mainRTL": {
+      "frameChain": "mainRTL",
+      "windowLabel": "main",
+      "confirmedSelector": "#ListGrid_R0 > th",
+      "url": "https://testotomasyon.univera.com.tr:8350/Interface/MobilSatisDagitim/IrsaliyeAlisExtDMLList.aspx?ListID=1031&FLTKVS=BYTTUR=1"
+    }
+  },
+  "steps": [
+    {
+      "id": 1,
+      "kind": "context.switch",
+      "windowLabel": "popup-1",
+      "frameChain": "main",
+      "timestamp": 1778333017677
+    },
+    {
+      "id": 2,
+      "kind": "ui.navigation",
+      "timestamp": 1778333017677,
+      "url": "https://testotomasyon.univera.com.tr:8350/"
+    },
+    {
+      "id": 3,
+      "kind": "ui.network_request",
+      "timestamp": 1778333018074,
+      "url": "https://testotomasyon.univera.com.tr:8350/Interface/Anamenu/LayoutComponents/Comminication/NotificationData.ashx?SA=1&t=1778333018073",
+      "method": "GET"
+    },
+    {
+      "id": 4,
+      "kind": "context.switch",
+      "windowLabel": "main",
+      "frameChain": "main",
+      "timestamp": 1778333018074
+    },
+    {
+      "id": 5,
+      "kind": "ui.network_request",
+      "timestamp": 1778333018074,
+      "url": "https://testotomasyon.univera.com.tr:8350/Interface/Anamenu/LayoutComponents/Comminication/NotificationData.ashx?SA=1&t=1778333018073",
+      "method": "GET"
+    },
+    {
+      "id": 6,
+      "kind": "context.switch",
+      "windowLabel": "popup-1",
+      "frameChain": "main",
+      "timestamp": 1778333018074
+    },
+    {
+      "id": 7,
+      "kind": "ui.network_request",
+      "timestamp": 1778333018074,
+      "url": "https://testotomasyon.univera.com.tr:8350/Interface/Anamenu/LayoutComponents/Comminication/NotificationData.ashx?t=1778333018074",
+      "method": "GET"
+    },
+    {
+      "id": 8,
+      "kind": "context.switch",
+      "windowLabel": "main",
+      "frameChain": "main",
+      "timestamp": 1778333018074
+    },
+    {
+      "id": 9,
+      "kind": "ui.network_request",
+      "timestamp": 1778333018074,
+      "url": "https://testotomasyon.univera.com.tr:8350/Interface/Anamenu/LayoutComponents/Comminication/NotificationData.ashx?t=1778333018074",
+      "method": "GET"
+    },
+    {
+      "id": 11,
+      "kind": "ui.click",
+      "timestamp": 1778333021262,
+      "target": {
+        "selector": "#edtUserName",
+        "score": 100,
+        "source": "primary"
+      },
+      "url": "https://testotomasyon.univera.com.tr:8350/"
+    },
+    {
+      "id": 12,
+      "kind": "ui.keypress",
+      "timestamp": 1778333024143,
+      "target": {
+        "selector": "#edtUserName",
+        "score": 100,
+        "source": "primary"
+      },
+      "value": "ERCYONETICI",
+      "key": "Tab",
+      "url": "https://testotomasyon.univera.com.tr:8350/"
+    },
+    {
+      "id": 13,
+      "kind": "ui.fill",
+      "timestamp": 1778333024144,
+      "target": {
+        "selector": "#edtUserName",
+        "score": 100,
+        "source": "primary"
+      },
+      "value": "ERCYONETICI",
+      "url": "https://testotomasyon.univera.com.tr:8350/"
+    },
+    {
+      "id": 15,
+      "kind": "ui.fill",
+      "timestamp": 1778333026408,
+      "target": {
+        "selector": "#edtPass",
+        "score": 100,
+        "source": "primary"
+      },
+      "value": "***",
+      "url": "https://testotomasyon.univera.com.tr:8350/"
+    },
+    {
+      "id": 17,
+      "kind": "ui.click",
+      "timestamp": 1778333026472,
+      "target": {
+        "selector": "#btnLogin",
+        "score": 100,
+        "source": "primary"
+      },
+      "url": "https://testotomasyon.univera.com.tr:8350/"
+    },
+    {
+      "id": 18,
+      "kind": "context.switch",
+      "windowLabel": "popup-1",
+      "frameChain": "main",
+      "timestamp": 1778333028001
+    },
+    {
+      "id": 19,
+      "kind": "ui.navigation",
+      "timestamp": 1778333028001,
+      "url": "https://testotomasyon.univera.com.tr:8350/Interface/Anamenu/Default.aspx"
+    },
+    {
+      "id": 20,
+      "kind": "context.switch",
+      "windowLabel": "main",
+      "frameChain": "main",
+      "timestamp": 1778333028436
+    },
+    {
+      "id": 21,
+      "kind": "ui.error_message",
+      "timestamp": 1778333028436,
+      "target": {
+        "selector": "#alertNotifications > div > div > div:nth-of-type(2) > div > div > div",
+        "score": 100,
+        "source": "primary"
+      },
+      "url": "https://testotomasyon.univera.com.tr:8350/Interface/Anamenu/Default.aspx"
+    },
+    {
+      "id": 22,
+      "kind": "context.switch",
+      "windowLabel": "popup-1",
+      "frameChain": "main",
+      "timestamp": 1778333028439
+    },
+    {
+      "id": 23,
+      "kind": "ui.network_request",
+      "timestamp": 1778333028439,
+      "url": "https://testotomasyon.univera.com.tr:8350/Interface/Anamenu/LayoutComponents/Comminication/CHONPS.ashx?C=1",
+      "method": "GET"
+    },
+    {
+      "id": 24,
+      "kind": "context.switch",
+      "windowLabel": "main",
+      "frameChain": "main",
+      "timestamp": 1778333028439
+    },
+    {
+      "id": 25,
+      "kind": "ui.network_request",
+      "timestamp": 1778333028439,
+      "url": "https://testotomasyon.univera.com.tr:8350/Interface/Anamenu/LayoutComponents/Comminication/CHONPS.ashx?C=1",
+      "method": "GET"
+    },
+    {
+      "id": 26,
+      "kind": "context.switch",
+      "windowLabel": "popup-1",
+      "frameChain": "main",
+      "timestamp": 1778333029002
+    },
+    {
+      "id": 27,
+      "kind": "ui.network_request",
+      "timestamp": 1778333029002,
+      "url": "https://testotomasyon.univera.com.tr:8350/Interface/Anamenu/LayoutComponents/Comminication/CHONPS.ashx?",
+      "method": "GET"
+    },
+    {
+      "id": 28,
+      "kind": "context.switch",
+      "windowLabel": "main",
+      "frameChain": "main",
+      "timestamp": 1778333029002
+    },
+    {
+      "id": 29,
+      "kind": "ui.network_request",
+      "timestamp": 1778333029002,
+      "url": "https://testotomasyon.univera.com.tr:8350/Interface/Anamenu/LayoutComponents/Comminication/CHONPS.ashx?",
+      "method": "GET"
+    },
+    {
+      "id": 30,
+      "kind": "context.switch",
+      "windowLabel": "popup-1",
+      "frameChain": "main",
+      "timestamp": 1778333029066
+    },
+    {
+      "id": 31,
+      "kind": "ui.network_request",
+      "timestamp": 1778333029066,
+      "url": "https://testotomasyon.univera.com.tr:8350/Interface/Anamenu/LayoutComponents/Comminication/NotificationData.ashx?SA=1&t=1778333029066",
+      "method": "GET"
+    },
+    {
+      "id": 32,
+      "kind": "context.switch",
+      "windowLabel": "main",
+      "frameChain": "main",
+      "timestamp": 1778333029066
+    },
+    {
+      "id": 33,
+      "kind": "ui.network_request",
+      "timestamp": 1778333029066,
+      "url": "https://testotomasyon.univera.com.tr:8350/Interface/Anamenu/LayoutComponents/Comminication/NotificationData.ashx?SA=1&t=1778333029066",
+      "method": "GET"
+    },
+    {
+      "id": 34,
+      "kind": "context.switch",
+      "windowLabel": "popup-1",
+      "frameChain": "main",
+      "timestamp": 1778333029066
+    },
+    {
+      "id": 35,
+      "kind": "ui.network_request",
+      "timestamp": 1778333029066,
+      "url": "https://testotomasyon.univera.com.tr:8350/Interface/Anamenu/LayoutComponents/Comminication/NotificationData.ashx?t=1778333029066",
+      "method": "GET"
+    },
+    {
+      "id": 36,
+      "kind": "context.switch",
+      "windowLabel": "main",
+      "frameChain": "main",
+      "timestamp": 1778333029066
+    },
+    {
+      "id": 37,
+      "kind": "ui.network_request",
+      "timestamp": 1778333029066,
+      "url": "https://testotomasyon.univera.com.tr:8350/Interface/Anamenu/LayoutComponents/Comminication/NotificationData.ashx?t=1778333029066",
+      "method": "GET"
+    },
+    {
+      "id": 38,
+      "kind": "ui.click",
+      "timestamp": 1778333033450,
+      "target": {
+        "selector": "a > span[data-menu-kod=\"1202\"]",
+        "score": 90,
+        "source": "cssPath"
+      },
+      "url": "https://testotomasyon.univera.com.tr:8350/Interface/Anamenu/Default.aspx"
+    },
+    {
+      "id": 39,
+      "kind": "ui.click",
+      "timestamp": 1778333036773,
+      "target": {
+        "selector": "a > span[data-menu-kod=\"1216\"]",
+        "score": 90,
+        "source": "cssPath"
+      },
+      "url": "https://testotomasyon.univera.com.tr:8350/Interface/Anamenu/Default.aspx"
+    },
+    {
+      "id": 40,
+      "kind": "ui.click",
+      "timestamp": 1778333038486,
+      "target": {
+        "selector": "a > span[data-menu-kod=\"1218\"]",
+        "score": 90,
+        "source": "cssPath"
+      },
+      "url": "https://testotomasyon.univera.com.tr:8350/Interface/Anamenu/Default.aspx"
+    },
+    {
+      "id": 41,
+      "kind": "ui.title_change",
+      "timestamp": 1778333038957,
+      "url": "https://testotomasyon.univera.com.tr:8350/Interface/Anamenu/Default.aspx",
+      "to": "Alış İrsaliyesi Listesi"
+    },
+    {
+      "id": 42,
+      "kind": "context.switch",
+      "windowLabel": "popup-1",
+      "frameChain": "main",
+      "timestamp": 1778333038971
+    },
+    {
+      "id": 43,
+      "kind": "ui.network_request",
+      "timestamp": 1778333038971,
+      "url": "https://testotomasyon.univera.com.tr:8350/Interface/Anamenu/LayoutComponents/Comminication/NotificationData.ashx?SA=1&t=1778333038970",
+      "method": "GET"
+    },
+    {
+      "id": 44,
+      "kind": "context.switch",
+      "windowLabel": "main",
+      "frameChain": "main",
+      "timestamp": 1778333038971
+    },
+    {
+      "id": 45,
+      "kind": "ui.network_request",
+      "timestamp": 1778333038971,
+      "url": "https://testotomasyon.univera.com.tr:8350/Interface/Anamenu/LayoutComponents/Comminication/NotificationData.ashx?SA=1&t=1778333038970",
+      "method": "GET"
+    },
+    {
+      "id": 46,
+      "kind": "context.switch",
+      "windowLabel": "popup-1",
+      "frameChain": "main",
+      "timestamp": 1778333038971
+    },
+    {
+      "id": 47,
+      "kind": "ui.network_request",
+      "timestamp": 1778333038971,
+      "url": "https://testotomasyon.univera.com.tr:8350/Interface/Anamenu/LayoutComponents/Comminication/NotificationData.ashx?t=1778333038971",
+      "method": "GET"
+    },
+    {
+      "id": 48,
+      "kind": "context.switch",
+      "windowLabel": "main",
+      "frameChain": "main",
+      "timestamp": 1778333038971
+    },
+    {
+      "id": 49,
+      "kind": "ui.network_request",
+      "timestamp": 1778333038971,
+      "url": "https://testotomasyon.univera.com.tr:8350/Interface/Anamenu/LayoutComponents/Comminication/NotificationData.ashx?t=1778333038971",
+      "method": "GET"
+    },
+    {
+      "id": 50,
+      "kind": "context.switch",
+      "windowLabel": "main",
+      "frameChain": "mainRTL",
+      "timestamp": 1778333038990
+    },
+    {
+      "id": 53,
+      "kind": "ui.click",
+      "timestamp": 1778333049021,
+      "target": {
+        "selector": "#ListGrid_R0C0",
+        "score": 100,
+        "source": "primary"
+      },
+      "url": "https://testotomasyon.univera.com.tr:8350/Interface/MobilSatisDagitim/IrsaliyeAlisExtDMLList.aspx?ListID=1031&FLTKVS=BYTTUR=1"
+    },
+    {
+      "id": 54,
+      "kind": "ui.click",
+      "timestamp": 1778333049783,
+      "target": {
+        "selector": "#NvgxToolbar_Item_2 > span",
+        "score": 100,
+        "source": "primary"
+      },
+      "url": "https://testotomasyon.univera.com.tr:8350/Interface/MobilSatisDagitim/IrsaliyeAlisExtDMLList.aspx?ListID=1031&FLTKVS=BYTTUR=1"
+    },
+    {
+      "id": 55,
+      "kind": "context.switch",
+      "windowLabel": "popup-1",
+      "frameChain": "main",
+      "timestamp": 1778333049796
+    },
+    {
+      "id": 56,
+      "kind": "ui.network_request",
+      "timestamp": 1778333049796,
+      "url": "https://testotomasyon.univera.com.tr:8350/Interface/Lists/DMLFormHandler.ashx?CK=IrsaliyeAlisExt&MeNo=52740&DMLType=Edit&RK=2026|122687&DCV=1&ATIC=true&ListID=1031&FLTKVS=BYTTUR=1",
+      "method": "GET"
+    },
+    {
+      "id": 57,
+      "kind": "context.switch",
+      "windowLabel": "main",
+      "frameChain": "main",
+      "timestamp": 1778333049796
+    },
+    {
+      "id": 58,
+      "kind": "ui.network_request",
+      "timestamp": 1778333049796,
+      "url": "https://testotomasyon.univera.com.tr:8350/Interface/Lists/DMLFormHandler.ashx?CK=IrsaliyeAlisExt&MeNo=52740&DMLType=Edit&RK=2026|122687&DCV=1&ATIC=true&ListID=1031&FLTKVS=BYTTUR=1",
+      "method": "GET"
+    },
+    {
+      "id": 59,
+      "kind": "context.switch",
+      "windowLabel": "popup-2",
+      "frameChain": "main",
+      "timestamp": 1778333051554
+    },
+    {
+      "id": 60,
+      "kind": "ui.network_request",
+      "timestamp": 1778333051554,
+      "url": "https://testotomasyon.univera.com.tr:8350/Interface/Anamenu/LayoutComponents/Comminication/NotificationData.ashx?SA=1&t=1778333051553",
+      "method": "GET"
+    },
+    {
+      "id": 61,
+      "kind": "ui.network_request",
+      "timestamp": 1778333051554,
+      "url": "https://testotomasyon.univera.com.tr:8350/Interface/Anamenu/LayoutComponents/Comminication/NotificationData.ashx?t=1778333051554",
+      "method": "GET"
+    },
+    {
+      "id": 62,
+      "kind": "ui.click",
+      "timestamp": 1778333053931,
+      "target": {
+        "selector": "#DCCxGridNvgxToolbar_Item_2 > span",
+        "score": 100,
+        "source": "primary"
+      },
+      "url": "https://testotomasyon.univera.com.tr:8350/Interface/MobilSatisDagitim/IrsaliyeAlisExtDML.aspx?DMLType=Edit&Title=AlisIrsaliyesi&RK=2026%7C122687&MeNo=52740&CK=IrsaliyeAlisExt&DCV=1&ATIC=true&ListID=1031&FLTKVS=BYTTUR%3D1"
+    },
+    {
+      "id": 64,
+      "kind": "ui.blur",
+      "timestamp": 1778333085408,
+      "target": {
+        "selector": "#DCC_DetGrd_RT_edtDetMik_NBE_t",
+        "score": 100,
+        "source": "primary"
+      },
+      "value": "102",
+      "url": "https://testotomasyon.univera.com.tr:8350/Interface/MobilSatisDagitim/IrsaliyeAlisExtDML.aspx?DMLType=Edit&Title=AlisIrsaliyesi&RK=2026%7C122687&MeNo=52740&CK=IrsaliyeAlisExt&DCV=1&ATIC=true&ListID=1031&FLTKVS=BYTTUR%3D1"
+    },
+    {
+      "id": 67,
+      "kind": "ui.click",
+      "timestamp": 1778333086591,
+      "target": {
+        "selector": "#DCC_DetGrd_RT_DCC_DetGrdBtnOK",
+        "score": 100,
+        "source": "primary"
+      },
+      "url": "https://testotomasyon.univera.com.tr:8350/Interface/MobilSatisDagitim/IrsaliyeAlisExtDML.aspx?DMLType=Edit&Title=AlisIrsaliyesi&RK=2026%7C122687&MeNo=52740&CK=IrsaliyeAlisExt&DCV=1&ATIC=true&ListID=1031&FLTKVS=BYTTUR%3D1"
+    },
+    {
+      "id": 68,
+      "kind": "ui.blur",
+      "timestamp": 1778333086600,
+      "target": {
+        "selector": "#DCC_DetGrd_RT_DCC_DetGrdBtnOK",
+        "score": 100,
+        "source": "primary"
+      },
+      "value": "Kaydet",
+      "url": "https://testotomasyon.univera.com.tr:8350/Interface/MobilSatisDagitim/IrsaliyeAlisExtDML.aspx?DMLType=Edit&Title=AlisIrsaliyesi&RK=2026%7C122687&MeNo=52740&CK=IrsaliyeAlisExt&DCV=1&ATIC=true&ListID=1031&FLTKVS=BYTTUR%3D1"
+    },
+    {
+      "id": 70,
+      "kind": "ui.click",
+      "timestamp": 1778333090462,
+      "target": {
+        "selector": "#MainNvgxToolbar_Item_1 > span",
+        "score": 100,
+        "source": "primary"
+      },
+      "url": "https://testotomasyon.univera.com.tr:8350/Interface/MobilSatisDagitim/IrsaliyeAlisExtDML.aspx?DMLType=Edit&Title=AlisIrsaliyesi&RK=2026%7C122687&MeNo=52740&CK=IrsaliyeAlisExt&DCV=1&ATIC=true&ListID=1031&FLTKVS=BYTTUR%3D1"
+    },
+    {
+      "id": 71,
+      "kind": "ui.click",
+      "timestamp": 1778333097438,
+      "target": {
+        "selector": "#MainNvgxToolbar_Item_0 > span",
+        "score": 100,
+        "source": "primary"
+      },
+      "url": "https://testotomasyon.univera.com.tr:8350/Interface/MobilSatisDagitim/IrsaliyeAlisExtDML.aspx?DMLType=Edit&Title=AlisIrsaliyesi&RK=2026%7C122687&MeNo=52740&CK=IrsaliyeAlisExt&DCV=1&ATIC=true&ListID=1031&FLTKVS=BYTTUR%3D1"
+    },
+    {
+      "id": 72,
+      "kind": "context.switch",
+      "windowLabel": "main",
+      "frameChain": "mainRTL",
+      "timestamp": 1778333097958
+    },
+    {
+      "id": 74,
+      "kind": "ui.click",
+      "timestamp": 1778333100635,
+      "target": {
+        "selector": "#NvgxToolbar_Item_0 > span",
+        "score": 100,
+        "source": "primary"
+      },
+      "url": "https://testotomasyon.univera.com.tr:8350/Interface/MobilSatisDagitim/IrsaliyeAlisExtDMLList.aspx?ListID=1031&FLTKVS=BYTTUR=1"
+    }
+  ]
+}

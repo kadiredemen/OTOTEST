@@ -1,0 +1,45 @@
+{
+  "schemaVersion": "1.0",
+  "planner": "ai",
+  "recordingName": "depocikisislemiduzenle",
+  "flow": "edit",
+  "operations": [
+    {
+      "op": "openList",
+      "menuCodes": [
+        "1295",
+        "1308",
+        "1310"
+      ],
+      "menuSelectors": [
+        "a > span[data-menu-kod=\"1295\"]",
+        "a > span[data-menu-kod=\"1308\"]",
+        "a > span[data-menu-kod=\"1310\"]"
+      ]
+    },
+    {
+      "op": "openSelectedRecord",
+      "rowSelector": "#ListGrid_R2C0",
+      "actionSelector": "#NvgxToolbar_Item_2 > span"
+    },
+    {
+      "op": "editDetailQuantity",
+      "triggerSelector": "#DCCxGridNvgxToolbar_Item_2 > span",
+      "editorSelector": "#DCC_DetGrd_RT_edtDetMiktar_NBE_t",
+      "quantitySelector": "#DCC_DetGrd_RT_edtDetMiktar_NBE_t",
+      "quantity": "3.00",
+      "lookups": [],
+      "okButtonSelector": "#DCC_DetGrd_RT_DCC_DetGrdBtnOK",
+      "rowProofSelector": "#DCC_DetGrd_R0 > th"
+    },
+    {
+      "op": "saveAndClose",
+      "saveButtonSelector": "#MainNvgxToolbar_Item_0 > span",
+      "closeButtonSelector": "#MainNvgxToolbar_Item_2 > span > i",
+      "combined": false
+    },
+    {
+      "op": "assertReady"
+    }
+  ]
+}

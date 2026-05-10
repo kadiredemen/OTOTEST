@@ -1,0 +1,67 @@
+{
+  "schemaVersion": "1.0",
+  "planner": "ai",
+  "recordingName": "alissiparisiolusturma",
+  "flow": "create",
+  "operations": [
+    {
+      "op": "openList",
+      "menuCodes": [
+        "1202",
+        "1216",
+        "1217"
+      ],
+      "menuSelectors": [
+        "a > span[data-menu-kod=\"1202\"]",
+        "a > span[data-menu-kod=\"1216\"]",
+        "a > span[data-menu-kod=\"1217\"]"
+      ]
+    },
+    {
+      "op": "openNewRecord",
+      "actionSelector": "#NvgxToolbar_Item_1 > span"
+    },
+    {
+      "op": "selectLookup",
+      "scope": "header",
+      "key": "DistKod",
+      "value": "1001",
+      "inputSelector": "#MCC_edtDistKod_TE_t",
+      "buttonSelector": "#MCC_edtDistKod_TE_b0 > img"
+    },
+    {
+      "op": "selectLookup",
+      "scope": "header",
+      "key": "MustKod",
+      "value": "TEST MÜŞTERİ_3",
+      "inputSelector": "#MCC_edtMustKod_TE_t",
+      "buttonSelector": "#MCC_edtMustKod_TE_b0 > img"
+    },
+    {
+      "op": "addDetailRow",
+      "triggerSelector": "#DCCxGridNvgxToolbar_Item_1 > span",
+      "editorSelector": "#DCC_DetGrd_RT_edtDetUrunKod_TE_t",
+      "quantitySelector": "#DCC_DetGrd_RT_edtDetMik_NBE_t",
+      "quantity": "10",
+      "lookups": [
+        {
+          "key": "UrunKod",
+          "value": "TS1_118_2",
+          "inputSelector": "#DCC_DetGrd_RT_edtDetUrunKod_TE_t",
+          "buttonSelector": "#DCC_DetGrd_RT_edtDetUrunKod_TE_b0 > img"
+        }
+      ],
+      "okButtonSelector": "#DCC_DetGrd_RT_DCC_DetGrdBtnOK",
+      "rowProofSelector": "#DCC_DetGrd_R0 > th"
+    },
+    {
+      "op": "saveAndClose",
+      "saveButtonSelector": "#MainNvgxToolbar_Item_1 > span",
+      "closeButtonSelector": "#MainNvgxToolbar_Item_0 > span",
+      "combined": false
+    },
+    {
+      "op": "assertReady"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "/api/recordings/generate/route": "app/api/recordings/generate/route.js",
+  "/api/recordings/route": "app/api/recordings/route.js",
+  "/api/recordings/start/route": "app/api/recordings/start/route.js",
+  "/api/recordings/status/route": "app/api/recordings/status/route.js",
+  "/api/recordings/stop/route": "app/api/recordings/stop/route.js",
+  "/api/test-files/code/route": "app/api/test-files/code/route.js",
+  "/api/test-files/jobs/[id]/route": "app/api/test-files/jobs/[id]/route.js",
+  "/api/test-files/route": "app/api/test-files/route.js",
+  "/api/test-files/run/route": "app/api/test-files/run/route.js",
+  "/page": "app/page.js",
+  "/recordings/page": "app/recordings/page.js",
+  "/test-files/page": "app/test-files/page.js"
+}

@@ -1,0 +1,123 @@
+{
+  "generatedAt": "2026-05-10T21:42:04.319Z",
+  "pages": [
+    {
+      "pageId": "list-interface-mobilsatisdagitim-irsaliyealisextdmllist-aspx",
+      "className": "AlisirsaliyesiPage",
+      "key": "list:/interface/mobilsatisdagitim/irsaliyealisextdmllist.aspx",
+      "listUrlPath": "/Interface/MobilSatisDagitim/IrsaliyeAlisExtDMLList.aspx",
+      "formUrlPath": "/Interface/MobilSatisDagitim/IrsaliyeAlisExtDML.aspx",
+      "menuCodes": [
+        "1202",
+        "1216",
+        "1218"
+      ],
+      "recordings": [
+        {
+          "name": "alisirsaliyesiduzenle",
+          "flow": "edit",
+          "planner": "ai",
+          "planPath": "recordings\\alisirsaliyesiduzenle-plan.json"
+        },
+        {
+          "name": "alisirsaliyesiolusturma",
+          "flow": "create",
+          "planner": "ai",
+          "planPath": "recordings\\alisirsaliyesiolusturma-plan.json"
+        }
+      ]
+    },
+    {
+      "pageId": "list-interface-mobilsatisdagitim-siparisalisextdmllist-aspx",
+      "className": "AlissiparisiPage",
+      "key": "list:/interface/mobilsatisdagitim/siparisalisextdmllist.aspx",
+      "listUrlPath": "/Interface/MobilSatisDagitim/SiparisAlisExtDMLList.aspx",
+      "formUrlPath": "/Interface/MobilSatisDagitim/SiparisAlisExtDML.aspx",
+      "menuCodes": [
+        "1202",
+        "1216",
+        "1217"
+      ],
+      "recordings": [
+        {
+          "name": "alissiparisiolusturma",
+          "flow": "create",
+          "planner": "ai",
+          "planPath": "recordings\\alissiparisiolusturma-plan.json"
+        }
+      ]
+    },
+    {
+      "pageId": "menu-1295-1308-1310",
+      "className": "DepocikisislemiPage",
+      "key": "menu:1295>1308>1310",
+      "listUrlPath": null,
+      "formUrlPath": "/Interface/Lists/ListCommonDML.aspx",
+      "menuCodes": [
+        "1295",
+        "1308",
+        "1310"
+      ],
+      "recordings": [
+        {
+          "name": "depocikisislemi",
+          "flow": "create",
+          "planner": "ai",
+          "planPath": "recordings\\depocikisislemi-plan.json"
+        },
+        {
+          "name": "depocikisislemiduzenle",
+          "flow": "edit",
+          "planner": "ai",
+          "planPath": "recordings\\depocikisislemiduzenle-plan.json"
+        }
+      ]
+    },
+    {
+      "pageId": "menu-1295-1308-1309",
+      "className": "DepogirisislemiPage",
+      "key": "menu:1295>1308>1309",
+      "listUrlPath": null,
+      "formUrlPath": "/Interface/Lists/ListCommonDML.aspx",
+      "menuCodes": [
+        "1295",
+        "1308",
+        "1309"
+      ],
+      "recordings": [
+        {
+          "name": "depogirisislemi",
+          "flow": "create",
+          "planner": "ai",
+          "planPath": "recordings\\depogirisislemi-plan.json"
+        },
+        {
+          "name": "depogirisislemiduzenle",
+          "flow": "edit",
+          "planner": "ai",
+          "planPath": "recordings\\depogirisislemiduzenle-plan.json"
+        }
+      ]
+    },
+    {
+      "pageId": "menu-1077-1078-1079",
+      "className": "MusteritanimlamaPage",
+      "key": "menu:1077>1078>1079",
+      "listUrlPath": null,
+      "formUrlPath": "/Interface/Lists/ListCommonDML.aspx",
+      "menuCodes": [
+        "1077",
+        "1078",
+        "1079"
+      ],
+      "recordings": [
+        {
+          "name": "musteritanimlama",
+          "flow": "create",
+          "planner": "deterministic",
+          "planPath": "recordings\\musteritanimlama-plan.json"
+        }
+      ]
+    }
+  ]
+}

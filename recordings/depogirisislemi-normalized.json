@@ -1,0 +1,1038 @@
+{
+  "schemaVersion": "1.0",
+  "dslVersion": "1.0",
+  "source": {
+    "targetUrl": "https://testotomasyon.univera.com.tr:8350/",
+    "recordedAt": "2026-04-26T15:10:21.134Z",
+    "totalActions": 89
+  },
+  "stats": {
+    "sanitizedActions": 89,
+    "normalizedActions": 87,
+    "droppedNoiseActions": 2,
+    "totalSteps": 103,
+    "droppedNoiseSteps": 18
+  },
+  "selectorPolicy": "id > data-* > css > xpath",
+  "lookupHints": [
+    {
+      "lookupKey": "DistKod",
+      "expectedValue": "1001",
+      "ownerContext": {
+        "windowLabel": "popup-2",
+        "frameChain": "main"
+      },
+      "ownerSelector": "#MCC_edtDistKod_TE_t",
+      "lookupButtonSelector": "#MCC_edtDistKod_TE_b0 > img",
+      "lookupButtonSelectorSource": "recorded",
+      "fromStep": {
+        "requestTimestamp": 1777216184525,
+        "valueTimestamp": 1777216194341
+      }
+    },
+    {
+      "lookupKey": "GirisDepoKod",
+      "expectedValue": "18",
+      "ownerContext": {
+        "windowLabel": "popup-2",
+        "frameChain": "main"
+      },
+      "ownerSelector": "#MCC_edtGirisDepoKodu_NE_t",
+      "lookupButtonSelector": "#MCC_edtGirisDepoKodu_NE_b0 > img",
+      "lookupButtonSelectorSource": "recorded",
+      "fromStep": {
+        "requestTimestamp": 1777216190430,
+        "valueTimestamp": 1777216195909
+      }
+    },
+    {
+      "lookupKey": "UrunKod",
+      "expectedValue": "TS1_118_2",
+      "ownerContext": {
+        "windowLabel": "popup-2",
+        "frameChain": "main"
+      },
+      "ownerSelector": "#DCC_DetGrd_RT_edtDetUrunKod_TE_t",
+      "lookupButtonSelector": "#DCC_DetGrd_RT_edtDetUrunKod_TE_b0 > img",
+      "lookupButtonSelectorSource": "recorded",
+      "fromStep": {
+        "requestTimestamp": 1777216197605,
+        "valueTimestamp": 1777216202878
+      }
+    }
+  ],
+  "detailEditorHints": [
+    {
+      "ownerContext": {
+        "windowLabel": "popup-2",
+        "frameChain": "main"
+      },
+      "addDetailButtonSelector": "#DCCxGridNvgxToolbar_Item_1 > span",
+      "firstEditorSelector": "#DCC_DetGrd_RT_edtDetUrunKod_TE_t",
+      "quantitySelector": "#DCC_DetGrd_RT_edtDetMiktar_NBE_t",
+      "okButtonSelector": "#DCC_DetGrd_RT_DCC_DetGrdBtnOK",
+      "editorContainerSelector": "#DCC_DetGrd_RT_TBL",
+      "rule": "After clicking addDetailButtonSelector, wait for firstEditorSelector before interacting with later fields.",
+      "fromStep": {
+        "addClickTimestamp": 1777216195981,
+        "firstEditorTimestamp": 1777216196789
+      }
+    }
+  ],
+  "detailCommitHints": [
+    {
+      "ownerContext": {
+        "windowLabel": "popup-2",
+        "frameChain": "main"
+      },
+      "okButtonSelector": "#DCC_DetGrd_RT_DCC_DetGrdBtnOK",
+      "rowProofSelector": "#DCC_DetGrd_R0 > th",
+      "editorInputSelector": "#DCC_DetGrd_RT_edtDetMiktar_NBE_t",
+      "editorContainerSelector": "#DCC_DetGrd_RT_TBL",
+      "recommendedProofs": [
+        {
+          "selector": "#DCC_DetGrd_R0 > th",
+          "state": "visible",
+          "role": "rowProof"
+        },
+        {
+          "selector": "#DCC_DetGrd_RT_DCC_DetGrdBtnOK",
+          "state": "hidden",
+          "role": "okButtonClosed"
+        },
+        {
+          "selector": "#DCC_DetGrd_RT_edtDetMiktar_NBE_t",
+          "state": "hidden",
+          "role": "editorInputClosed"
+        },
+        {
+          "selector": "#DCC_DetGrd_RT_TBL",
+          "state": "hidden",
+          "role": "editorClosed"
+        }
+      ],
+      "fromStep": {
+        "clickTimestamp": 1777216209095
+      }
+    }
+  ],
+  "saveCloseHints": [
+    {
+      "ownerContext": {
+        "windowLabel": "popup-2",
+        "frameChain": "main"
+      },
+      "saveButtonSelector": "#MainNvgxToolbar_Item_0 > span",
+      "closeButtonSelector": "#MainNvgxToolbar_Item_2 > span > i",
+      "combined": false,
+      "fromSteps": {
+        "saveClickTimestamp": 1777216211511,
+        "closeClickTimestamp": 1777216214248
+      }
+    }
+  ],
+  "popupLineage": [
+    {
+      "popupLabel": "popup-1",
+      "openedBy": null,
+      "firstSeenUrl": "https://testotomasyon.univera.com.tr:8350/"
+    },
+    {
+      "popupLabel": "popup-2",
+      "openedBy": {
+        "windowLabel": "main",
+        "frameChain": "mainRTL",
+        "selector": "#NvgxToolbar_Item_1 > span",
+        "timestamp": 1777216179769
+      },
+      "firstSeenUrl": "https://testotomasyon.univera.com.tr:8350/Interface/Anamenu/LayoutComponents/Comminication/NotificationData.ashx?SA=1&t=1777216181494"
+    },
+    {
+      "popupLabel": "popup-3",
+      "openedBy": {
+        "windowLabel": "popup-2",
+        "frameChain": "main",
+        "selector": "#MCC_edtDistKod_TE_b0 > img",
+        "timestamp": 1777216184614
+      },
+      "firstSeenUrl": "https://testotomasyon.univera.com.tr:8350/Interface/Lists/ListCommonDML.aspx?ListID=34&RVN=TXTKOD&RKN=LNGKOD&SELMULTI=false&FLTKVS=&LUMODE=1"
+    },
+    {
+      "popupLabel": "popup-4",
+      "openedBy": {
+        "windowLabel": "popup-2",
+        "frameChain": "main",
+        "selector": "#MCC_edtGirisDepoKodu_NE_b0 > img",
+        "timestamp": 1777216190515
+      },
+      "firstSeenUrl": "https://testotomasyon.univera.com.tr:8350/Interface/Lists/ListCommonDML.aspx?ListID=142&RVN=LNGKOD&RKN=LNGKOD&SELMULTI=false&FLTKVS=LNGDISTKOD=1,%27null%27&CF=1&LUMODE=1&__XHROwnerID=XHR&__UwfXHROwnerID=XHR&__DMLType=&__XHREvnKey=&reqSender=ListGrid"
+    },
+    {
+      "popupLabel": "popup-5",
+      "openedBy": {
+        "windowLabel": "popup-2",
+        "frameChain": "main",
+        "selector": "#DCC_DetGrd_RT_edtDetUrunKod_TE_b0 > img",
+        "timestamp": 1777216197681
+      },
+      "firstSeenUrl": "https://testotomasyon.univera.com.tr:8350/Interface/Lists/ListCommon.aspx?ListID=1870&RVN=TXTKOD&RKN=LNGKOD&SELMULTI=false&FLTKVS=&CF=1&LUMODE=1&__XHROwnerID=XHR&__UwfXHROwnerID=XHR&__DMLType=&__XHREvnKey=&reqSender=ListGrid"
+    }
+  ],
+  "frameMarkers": {
+    "mainRTL": {
+      "frameChain": "mainRTL",
+      "windowLabel": "main",
+      "confirmedSelector": "#ListGrid_R0 > th",
+      "url": "https://testotomasyon.univera.com.tr:8350/Interface/Lists/ListCommonDML.aspx?listid=1020"
+    }
+  },
+  "steps": [
+    {
+      "id": 1,
+      "kind": "context.switch",
+      "windowLabel": "popup-1",
+      "frameChain": "main",
+      "timestamp": 1777216143022
+    },
+    {
+      "id": 2,
+      "kind": "ui.navigation",
+      "timestamp": 1777216143022,
+      "url": "https://testotomasyon.univera.com.tr:8350/"
+    },
+    {
+      "id": 3,
+      "kind": "ui.network_request",
+      "timestamp": 1777216143408,
+      "url": "https://testotomasyon.univera.com.tr:8350/Interface/Anamenu/LayoutComponents/Comminication/NotificationData.ashx?SA=1&t=1777216143406",
+      "method": "GET"
+    },
+    {
+      "id": 4,
+      "kind": "context.switch",
+      "windowLabel": "main",
+      "frameChain": "main",
+      "timestamp": 1777216143408
+    },
+    {
+      "id": 5,
+      "kind": "ui.network_request",
+      "timestamp": 1777216143408,
+      "url": "https://testotomasyon.univera.com.tr:8350/Interface/Anamenu/LayoutComponents/Comminication/NotificationData.ashx?SA=1&t=1777216143406",
+      "method": "GET"
+    },
+    {
+      "id": 6,
+      "kind": "context.switch",
+      "windowLabel": "popup-1",
+      "frameChain": "main",
+      "timestamp": 1777216143408
+    },
+    {
+      "id": 7,
+      "kind": "ui.network_request",
+      "timestamp": 1777216143408,
+      "url": "https://testotomasyon.univera.com.tr:8350/Interface/Anamenu/LayoutComponents/Comminication/NotificationData.ashx?t=1777216143408",
+      "method": "GET"
+    },
+    {
+      "id": 8,
+      "kind": "context.switch",
+      "windowLabel": "main",
+      "frameChain": "main",
+      "timestamp": 1777216143408
+    },
+    {
+      "id": 9,
+      "kind": "ui.network_request",
+      "timestamp": 1777216143408,
+      "url": "https://testotomasyon.univera.com.tr:8350/Interface/Anamenu/LayoutComponents/Comminication/NotificationData.ashx?t=1777216143408",
+      "method": "GET"
+    },
+    {
+      "id": 11,
+      "kind": "ui.click",
+      "timestamp": 1777216146422,
+      "target": {
+        "selector": "#edtUserName",
+        "score": 100,
+        "source": "primary"
+      },
+      "url": "https://testotomasyon.univera.com.tr:8350/"
+    },
+    {
+      "id": 12,
+      "kind": "ui.fill",
+      "timestamp": 1777216151634,
+      "target": {
+        "selector": "#edtUserName",
+        "score": 100,
+        "source": "primary"
+      },
+      "value": "ERCYONETICI",
+      "url": "https://testotomasyon.univera.com.tr:8350/"
+    },
+    {
+      "id": 14,
+      "kind": "ui.click",
+      "timestamp": 1777216151690,
+      "target": {
+        "selector": "#edtPass",
+        "score": 100,
+        "source": "primary"
+      },
+      "url": "https://testotomasyon.univera.com.tr:8350/"
+    },
+    {
+      "id": 15,
+      "kind": "ui.fill",
+      "timestamp": 1777216154299,
+      "target": {
+        "selector": "#edtPass",
+        "score": 100,
+        "source": "primary"
+      },
+      "value": "***",
+      "url": "https://testotomasyon.univera.com.tr:8350/"
+    },
+    {
+      "id": 17,
+      "kind": "ui.click",
+      "timestamp": 1777216154370,
+      "target": {
+        "selector": "#btnLogin",
+        "score": 100,
+        "source": "primary"
+      },
+      "url": "https://testotomasyon.univera.com.tr:8350/"
+    },
+    {
+      "id": 18,
+      "kind": "context.switch",
+      "windowLabel": "popup-1",
+      "frameChain": "main",
+      "timestamp": 1777216165481
+    },
+    {
+      "id": 19,
+      "kind": "ui.navigation",
+      "timestamp": 1777216165481,
+      "url": "https://testotomasyon.univera.com.tr:8350/Interface/Anamenu/Default.aspx"
+    },
+    {
+      "id": 20,
+      "kind": "context.switch",
+      "windowLabel": "main",
+      "frameChain": "main",
+      "timestamp": 1777216166386
+    },
+    {
+      "id": 21,
+      "kind": "ui.error_message",
+      "timestamp": 1777216166386,
+      "target": {
+        "selector": "#alertNotifications > div > div > div:nth-of-type(2) > div > div > div",
+        "score": 100,
+        "source": "primary"
+      },
+      "url": "https://testotomasyon.univera.com.tr:8350/Interface/Anamenu/Default.aspx"
+    },
+    {
+      "id": 22,
+      "kind": "context.switch",
+      "windowLabel": "popup-1",
+      "frameChain": "main",
+      "timestamp": 1777216166388
+    },
+    {
+      "id": 23,
+      "kind": "ui.network_request",
+      "timestamp": 1777216166388,
+      "url": "https://testotomasyon.univera.com.tr:8350/Interface/Anamenu/LayoutComponents/Comminication/CHONPS.ashx?C=1",
+      "method": "GET"
+    },
+    {
+      "id": 24,
+      "kind": "context.switch",
+      "windowLabel": "main",
+      "frameChain": "main",
+      "timestamp": 1777216166388
+    },
+    {
+      "id": 25,
+      "kind": "ui.network_request",
+      "timestamp": 1777216166388,
+      "url": "https://testotomasyon.univera.com.tr:8350/Interface/Anamenu/LayoutComponents/Comminication/CHONPS.ashx?C=1",
+      "method": "GET"
+    },
+    {
+      "id": 26,
+      "kind": "context.switch",
+      "windowLabel": "popup-1",
+      "frameChain": "main",
+      "timestamp": 1777216166985
+    },
+    {
+      "id": 27,
+      "kind": "ui.network_request",
+      "timestamp": 1777216166985,
+      "url": "https://testotomasyon.univera.com.tr:8350/Interface/Anamenu/LayoutComponents/Comminication/CHONPS.ashx?",
+      "method": "GET"
+    },
+    {
+      "id": 28,
+      "kind": "context.switch",
+      "windowLabel": "main",
+      "frameChain": "main",
+      "timestamp": 1777216166985
+    },
+    {
+      "id": 29,
+      "kind": "ui.network_request",
+      "timestamp": 1777216166985,
+      "url": "https://testotomasyon.univera.com.tr:8350/Interface/Anamenu/LayoutComponents/Comminication/CHONPS.ashx?",
+      "method": "GET"
+    },
+    {
+      "id": 30,
+      "kind": "context.switch",
+      "windowLabel": "popup-1",
+      "frameChain": "main",
+      "timestamp": 1777216167057
+    },
+    {
+      "id": 31,
+      "kind": "ui.network_request",
+      "timestamp": 1777216167057,
+      "url": "https://testotomasyon.univera.com.tr:8350/Interface/Anamenu/LayoutComponents/Comminication/NotificationData.ashx?SA=1&t=1777216167057",
+      "method": "GET"
+    },
+    {
+      "id": 32,
+      "kind": "context.switch",
+      "windowLabel": "main",
+      "frameChain": "main",
+      "timestamp": 1777216167057
+    },
+    {
+      "id": 33,
+      "kind": "ui.network_request",
+      "timestamp": 1777216167057,
+      "url": "https://testotomasyon.univera.com.tr:8350/Interface/Anamenu/LayoutComponents/Comminication/NotificationData.ashx?SA=1&t=1777216167057",
+      "method": "GET"
+    },
+    {
+      "id": 34,
+      "kind": "context.switch",
+      "windowLabel": "popup-1",
+      "frameChain": "main",
+      "timestamp": 1777216167057
+    },
+    {
+      "id": 35,
+      "kind": "ui.network_request",
+      "timestamp": 1777216167057,
+      "url": "https://testotomasyon.univera.com.tr:8350/Interface/Anamenu/LayoutComponents/Comminication/NotificationData.ashx?t=1777216167057",
+      "method": "GET"
+    },
+    {
+      "id": 36,
+      "kind": "context.switch",
+      "windowLabel": "main",
+      "frameChain": "main",
+      "timestamp": 1777216167057
+    },
+    {
+      "id": 37,
+      "kind": "ui.network_request",
+      "timestamp": 1777216167057,
+      "url": "https://testotomasyon.univera.com.tr:8350/Interface/Anamenu/LayoutComponents/Comminication/NotificationData.ashx?t=1777216167057",
+      "method": "GET"
+    },
+    {
+      "id": 38,
+      "kind": "ui.click",
+      "timestamp": 1777216172474,
+      "target": {
+        "selector": "a > span[data-menu-kod=\"1295\"]",
+        "score": 90,
+        "source": "cssPath"
+      },
+      "url": "https://testotomasyon.univera.com.tr:8350/Interface/Anamenu/Default.aspx"
+    },
+    {
+      "id": 39,
+      "kind": "ui.click",
+      "timestamp": 1777216174338,
+      "target": {
+        "selector": "a > span[data-menu-kod=\"1308\"]",
+        "score": 90,
+        "source": "cssPath"
+      },
+      "url": "https://testotomasyon.univera.com.tr:8350/Interface/Anamenu/Default.aspx"
+    },
+    {
+      "id": 40,
+      "kind": "ui.click",
+      "timestamp": 1777216175803,
+      "target": {
+        "selector": "a > span[data-menu-kod=\"1309\"]",
+        "score": 90,
+        "source": "cssPath"
+      },
+      "url": "https://testotomasyon.univera.com.tr:8350/Interface/Anamenu/Default.aspx"
+    },
+    {
+      "id": 41,
+      "kind": "ui.title_change",
+      "timestamp": 1777216177700,
+      "url": "https://testotomasyon.univera.com.tr:8350/Interface/Anamenu/Default.aspx",
+      "to": "Depo Giriş Listesi"
+    },
+    {
+      "id": 42,
+      "kind": "context.switch",
+      "windowLabel": "popup-1",
+      "frameChain": "main",
+      "timestamp": 1777216177715
+    },
+    {
+      "id": 43,
+      "kind": "ui.network_request",
+      "timestamp": 1777216177715,
+      "url": "https://testotomasyon.univera.com.tr:8350/Interface/Anamenu/LayoutComponents/Comminication/NotificationData.ashx?SA=1&t=1777216177713",
+      "method": "GET"
+    },
+    {
+      "id": 44,
+      "kind": "context.switch",
+      "windowLabel": "main",
+      "frameChain": "main",
+      "timestamp": 1777216177715
+    },
+    {
+      "id": 45,
+      "kind": "ui.network_request",
+      "timestamp": 1777216177715,
+      "url": "https://testotomasyon.univera.com.tr:8350/Interface/Anamenu/LayoutComponents/Comminication/NotificationData.ashx?SA=1&t=1777216177713",
+      "method": "GET"
+    },
+    {
+      "id": 46,
+      "kind": "context.switch",
+      "windowLabel": "popup-1",
+      "frameChain": "main",
+      "timestamp": 1777216177715
+    },
+    {
+      "id": 47,
+      "kind": "ui.network_request",
+      "timestamp": 1777216177715,
+      "url": "https://testotomasyon.univera.com.tr:8350/Interface/Anamenu/LayoutComponents/Comminication/NotificationData.ashx?t=1777216177715",
+      "method": "GET"
+    },
+    {
+      "id": 48,
+      "kind": "context.switch",
+      "windowLabel": "main",
+      "frameChain": "main",
+      "timestamp": 1777216177715
+    },
+    {
+      "id": 49,
+      "kind": "ui.network_request",
+      "timestamp": 1777216177715,
+      "url": "https://testotomasyon.univera.com.tr:8350/Interface/Anamenu/LayoutComponents/Comminication/NotificationData.ashx?t=1777216177715",
+      "method": "GET"
+    },
+    {
+      "id": 50,
+      "kind": "context.switch",
+      "windowLabel": "main",
+      "frameChain": "mainRTL",
+      "timestamp": 1777216177732
+    },
+    {
+      "id": 52,
+      "kind": "ui.click",
+      "timestamp": 1777216179769,
+      "target": {
+        "selector": "#NvgxToolbar_Item_1 > span",
+        "score": 100,
+        "source": "primary"
+      },
+      "url": "https://testotomasyon.univera.com.tr:8350/Interface/Lists/ListCommonDML.aspx?listid=1020"
+    },
+    {
+      "id": 53,
+      "kind": "context.switch",
+      "windowLabel": "popup-1",
+      "frameChain": "main",
+      "timestamp": 1777216179772
+    },
+    {
+      "id": 54,
+      "kind": "ui.network_request",
+      "timestamp": 1777216179772,
+      "url": "https://testotomasyon.univera.com.tr:8350/Interface/Lists/DMLFormHandler.ashx?CK=DepoGiris&MeNo=52860&DMLType=New&RK=&DCV=&ATIC=true&listid=1020",
+      "method": "GET"
+    },
+    {
+      "id": 55,
+      "kind": "context.switch",
+      "windowLabel": "main",
+      "frameChain": "main",
+      "timestamp": 1777216179772
+    },
+    {
+      "id": 56,
+      "kind": "ui.network_request",
+      "timestamp": 1777216179772,
+      "url": "https://testotomasyon.univera.com.tr:8350/Interface/Lists/DMLFormHandler.ashx?CK=DepoGiris&MeNo=52860&DMLType=New&RK=&DCV=&ATIC=true&listid=1020",
+      "method": "GET"
+    },
+    {
+      "id": 57,
+      "kind": "context.switch",
+      "windowLabel": "popup-2",
+      "frameChain": "main",
+      "timestamp": 1777216181496
+    },
+    {
+      "id": 58,
+      "kind": "ui.network_request",
+      "timestamp": 1777216181496,
+      "url": "https://testotomasyon.univera.com.tr:8350/Interface/Anamenu/LayoutComponents/Comminication/NotificationData.ashx?SA=1&t=1777216181494",
+      "method": "GET"
+    },
+    {
+      "id": 59,
+      "kind": "ui.network_request",
+      "timestamp": 1777216181496,
+      "url": "https://testotomasyon.univera.com.tr:8350/Interface/Anamenu/LayoutComponents/Comminication/NotificationData.ashx?t=1777216181496",
+      "method": "GET"
+    },
+    {
+      "id": 60,
+      "kind": "ui.network_request",
+      "timestamp": 1777216184525,
+      "url": "https://testotomasyon.univera.com.tr:8350/Interface/Lists/LookupHandler.ashx?UIOFTN=Univera.Panorama.UIObjects.DMLForms.UIDepoGiris,%20Univera.Panorama.UIObjects,%20Version=8.35.0.107,%20Culture=neutral,%20PublicKeyToken=null&UIOUC=1&UKN=DistKod&LUCCtrlVal=&LUOwnerQStr=DMLType%3DNew%26Title%3DDepoGiris%26RK%3D%26MeNo%3D52860%26CK%3DDepoGiris%26DCV%3D%26ATIC%3Dtrue%26listid%3D1020",
+      "method": "GET"
+    },
+    {
+      "id": 61,
+      "kind": "ui.click",
+      "timestamp": 1777216184614,
+      "target": {
+        "selector": "#MCC_edtDistKod_TE_b0 > img",
+        "score": 100,
+        "source": "primary"
+      },
+      "url": "https://testotomasyon.univera.com.tr:8350/Interface/MobilSatisDagitim/DepoGiris.aspx?DMLType=New&Title=DepoGiris&RK=&MeNo=52860&CK=DepoGiris&DCV=&ATIC=true&listid=1020"
+    },
+    {
+      "id": 62,
+      "kind": "context.switch",
+      "windowLabel": "popup-3",
+      "frameChain": "main",
+      "timestamp": 1777216184928
+    },
+    {
+      "id": 63,
+      "kind": "ui.title_change",
+      "timestamp": 1777216184928,
+      "url": "https://testotomasyon.univera.com.tr:8350/Interface/Lists/ListCommonDML.aspx?ListID=34&RVN=TXTKOD&RKN=LNGKOD&SELMULTI=false&FLTKVS=&LUMODE=1",
+      "from": "Dist",
+      "to": "Dist Listesi"
+    },
+    {
+      "id": 64,
+      "kind": "ui.network_request",
+      "timestamp": 1777216184948,
+      "url": "https://testotomasyon.univera.com.tr:8350/Interface/Anamenu/LayoutComponents/Comminication/NotificationData.ashx?SA=1&t=1777216184947",
+      "method": "GET"
+    },
+    {
+      "id": 65,
+      "kind": "ui.network_request",
+      "timestamp": 1777216184948,
+      "url": "https://testotomasyon.univera.com.tr:8350/Interface/Anamenu/LayoutComponents/Comminication/NotificationData.ashx?t=1777216184948",
+      "method": "GET"
+    },
+    {
+      "id": 67,
+      "kind": "ui.click",
+      "timestamp": 1777216187282,
+      "target": {
+        "selector": "#ListGrid_R0C0",
+        "score": 100,
+        "source": "primary"
+      },
+      "url": "https://testotomasyon.univera.com.tr:8350/Interface/Lists/ListCommonDML.aspx?ListID=34&RVN=TXTKOD&RKN=LNGKOD&SELMULTI=false&FLTKVS=&LUMODE=1"
+    },
+    {
+      "id": 68,
+      "kind": "ui.click",
+      "timestamp": 1777216187939,
+      "target": {
+        "selector": "#NvgxToolbar_Item_0 > span",
+        "score": 100,
+        "source": "primary"
+      },
+      "url": "https://testotomasyon.univera.com.tr:8350/Interface/Lists/ListCommonDML.aspx?ListID=34&RVN=TXTKOD&RKN=LNGKOD&SELMULTI=false&FLTKVS=&LUMODE=1"
+    },
+    {
+      "id": 69,
+      "kind": "context.switch",
+      "windowLabel": "popup-2",
+      "frameChain": "main",
+      "timestamp": 1777216187942
+    },
+    {
+      "id": 71,
+      "kind": "ui.network_request",
+      "timestamp": 1777216190430,
+      "url": "https://testotomasyon.univera.com.tr:8350/Interface/Lists/LookupHandler.ashx?UIOFTN=Univera.Panorama.UIObjects.DMLForms.UIDepoGiris,%20Univera.Panorama.UIObjects,%20Version=8.35.0.107,%20Culture=neutral,%20PublicKeyToken=null&UIOUC=1&UKN=GirisDepoKod&LUCCtrlVal=&LUOwnerQStr=DMLType%3DNew%26Title%3DDepoGiris%26RK%3D%26MeNo%3D52860%26CK%3DDepoGiris%26DCV%3D%26ATIC%3Dtrue%26listid%3D1020",
+      "method": "GET"
+    },
+    {
+      "id": 72,
+      "kind": "ui.click",
+      "timestamp": 1777216190515,
+      "target": {
+        "selector": "#MCC_edtGirisDepoKodu_NE_b0 > img",
+        "score": 100,
+        "source": "primary"
+      },
+      "url": "https://testotomasyon.univera.com.tr:8350/Interface/MobilSatisDagitim/DepoGiris.aspx?DMLType=New&Title=DepoGiris&RK=&MeNo=52860&CK=DepoGiris&DCV=&ATIC=true&listid=1020"
+    },
+    {
+      "id": 73,
+      "kind": "context.switch",
+      "windowLabel": "popup-4",
+      "frameChain": "main",
+      "timestamp": 1777216190825
+    },
+    {
+      "id": 74,
+      "kind": "ui.network_request",
+      "timestamp": 1777216190825,
+      "url": "https://testotomasyon.univera.com.tr:8350/Interface/Lists/ListCommonDML.aspx?ListID=142&RVN=LNGKOD&RKN=LNGKOD&SELMULTI=false&FLTKVS=LNGDISTKOD=1,%27null%27&CF=1&LUMODE=1&__XHROwnerID=XHR&__UwfXHROwnerID=XHR&__DMLType=&__XHREvnKey=&reqSender=ListGrid",
+      "method": "POST"
+    },
+    {
+      "id": 75,
+      "kind": "ui.network_request",
+      "timestamp": 1777216190827,
+      "url": "https://testotomasyon.univera.com.tr:8350/Interface/Anamenu/LayoutComponents/Comminication/NotificationData.ashx?SA=1&t=1777216190825",
+      "method": "GET"
+    },
+    {
+      "id": 76,
+      "kind": "ui.network_request",
+      "timestamp": 1777216190827,
+      "url": "https://testotomasyon.univera.com.tr:8350/Interface/Anamenu/LayoutComponents/Comminication/NotificationData.ashx?t=1777216190827",
+      "method": "GET"
+    },
+    {
+      "id": 79,
+      "kind": "ui.click",
+      "timestamp": 1777216193645,
+      "target": {
+        "selector": "#ListGrid_R5C0",
+        "score": 100,
+        "source": "primary"
+      },
+      "url": "https://testotomasyon.univera.com.tr:8350/Interface/Lists/ListCommonDML.aspx?ListID=142&RVN=LNGKOD&RKN=LNGKOD&SELMULTI=false&FLTKVS=LNGDISTKOD=1,%27null%27&CF=1&LUMODE=1"
+    },
+    {
+      "id": 80,
+      "kind": "ui.click",
+      "timestamp": 1777216194339,
+      "target": {
+        "selector": "#NvgxToolbar_Item_0 > span",
+        "score": 100,
+        "source": "primary"
+      },
+      "url": "https://testotomasyon.univera.com.tr:8350/Interface/Lists/ListCommonDML.aspx?ListID=142&RVN=LNGKOD&RKN=LNGKOD&SELMULTI=false&FLTKVS=LNGDISTKOD=1,%27null%27&CF=1&LUMODE=1"
+    },
+    {
+      "id": 81,
+      "kind": "context.switch",
+      "windowLabel": "popup-2",
+      "frameChain": "main",
+      "timestamp": 1777216194341
+    },
+    {
+      "id": 82,
+      "kind": "ui.blur",
+      "timestamp": 1777216194341,
+      "target": {
+        "selector": "#MCC_edtDistKod_TE_t",
+        "score": 100,
+        "source": "primary"
+      },
+      "value": "1001",
+      "url": "https://testotomasyon.univera.com.tr:8350/Interface/MobilSatisDagitim/DepoGiris.aspx?DMLType=New&Title=DepoGiris&RK=&MeNo=52860&CK=DepoGiris&DCV=&ATIC=true&listid=1020"
+    },
+    {
+      "id": 84,
+      "kind": "ui.blur",
+      "timestamp": 1777216195909,
+      "target": {
+        "selector": "#MCC_edtGirisDepoKodu_NE_t",
+        "score": 100,
+        "source": "primary"
+      },
+      "value": "18",
+      "url": "https://testotomasyon.univera.com.tr:8350/Interface/MobilSatisDagitim/DepoGiris.aspx?DMLType=New&Title=DepoGiris&RK=&MeNo=52860&CK=DepoGiris&DCV=&ATIC=true&listid=1020"
+    },
+    {
+      "id": 85,
+      "kind": "ui.click",
+      "timestamp": 1777216195981,
+      "target": {
+        "selector": "#DCCxGridNvgxToolbar_Item_1 > span",
+        "score": 100,
+        "source": "primary"
+      },
+      "url": "https://testotomasyon.univera.com.tr:8350/Interface/MobilSatisDagitim/DepoGiris.aspx?DMLType=New&Title=DepoGiris&RK=&MeNo=52860&CK=DepoGiris&DCV=&ATIC=true&listid=1020"
+    },
+    {
+      "id": 87,
+      "kind": "ui.network_request",
+      "timestamp": 1777216197605,
+      "url": "https://testotomasyon.univera.com.tr:8350/Interface/Lists/LookupHandler.ashx?UIOFTN=Univera.Panorama.UIObjects.DMLForms.UIDepoGiris,%20Univera.Panorama.UIObjects,%20Version=8.35.0.107,%20Culture=neutral,%20PublicKeyToken=null&UIOUC=2&UKN=UrunKod&LUCCtrlVal=&LUOwnerQStr=DMLType%3DNew%26Title%3DDepoGiris%26RK%3D%26MeNo%3D52860%26CK%3DDepoGiris%26DCV%3D%26ATIC%3Dtrue%26listid%3D1020",
+      "method": "GET"
+    },
+    {
+      "id": 88,
+      "kind": "ui.click",
+      "timestamp": 1777216197681,
+      "target": {
+        "selector": "#DCC_DetGrd_RT_edtDetUrunKod_TE_b0 > img",
+        "score": 100,
+        "source": "primary"
+      },
+      "url": "https://testotomasyon.univera.com.tr:8350/Interface/MobilSatisDagitim/DepoGiris.aspx?DMLType=New&Title=DepoGiris&RK=&MeNo=52860&CK=DepoGiris&DCV=&ATIC=true&listid=1020"
+    },
+    {
+      "id": 89,
+      "kind": "context.switch",
+      "windowLabel": "popup-5",
+      "frameChain": "main",
+      "timestamp": 1777216197974
+    },
+    {
+      "id": 90,
+      "kind": "ui.network_request",
+      "timestamp": 1777216197974,
+      "url": "https://testotomasyon.univera.com.tr:8350/Interface/Lists/ListCommon.aspx?ListID=1870&RVN=TXTKOD&RKN=LNGKOD&SELMULTI=false&FLTKVS=&CF=1&LUMODE=1&__XHROwnerID=XHR&__UwfXHROwnerID=XHR&__DMLType=&__XHREvnKey=&reqSender=ListGrid",
+      "method": "POST"
+    },
+    {
+      "id": 91,
+      "kind": "ui.network_request",
+      "timestamp": 1777216197976,
+      "url": "https://testotomasyon.univera.com.tr:8350/Interface/Anamenu/LayoutComponents/Comminication/NotificationData.ashx?SA=1&t=1777216197975",
+      "method": "GET"
+    },
+    {
+      "id": 92,
+      "kind": "ui.network_request",
+      "timestamp": 1777216197976,
+      "url": "https://testotomasyon.univera.com.tr:8350/Interface/Anamenu/LayoutComponents/Comminication/NotificationData.ashx?t=1777216197976",
+      "method": "GET"
+    },
+    {
+      "id": 94,
+      "kind": "ui.click",
+      "timestamp": 1777216199831,
+      "target": {
+        "selector": "#ListGrid_R3C0",
+        "score": 100,
+        "source": "primary"
+      },
+      "url": "https://testotomasyon.univera.com.tr:8350/Interface/Lists/ListCommon.aspx?ListID=1870&RVN=TXTKOD&RKN=LNGKOD&SELMULTI=false&FLTKVS=&CF=1&LUMODE=1"
+    },
+    {
+      "id": 96,
+      "kind": "ui.click",
+      "timestamp": 1777216200677,
+      "target": {
+        "selector": "#NvgxToolbar_Item_0 > span",
+        "score": 100,
+        "source": "primary"
+      },
+      "url": "https://testotomasyon.univera.com.tr:8350/Interface/Lists/ListCommon.aspx?ListID=1870&RVN=TXTKOD&RKN=LNGKOD&SELMULTI=false&FLTKVS=&CF=1&LUMODE=1"
+    },
+    {
+      "id": 97,
+      "kind": "context.switch",
+      "windowLabel": "popup-2",
+      "frameChain": "main",
+      "timestamp": 1777216202878
+    },
+    {
+      "id": 98,
+      "kind": "ui.blur",
+      "timestamp": 1777216202878,
+      "target": {
+        "selector": "#DCC_DetGrd_RT_edtDetUrunKod_TE_t",
+        "score": 100,
+        "source": "primary"
+      },
+      "value": "TS1_118_2",
+      "url": "https://testotomasyon.univera.com.tr:8350/Interface/MobilSatisDagitim/DepoGiris.aspx?DMLType=New&Title=DepoGiris&RK=&MeNo=52860&CK=DepoGiris&DCV=&ATIC=true&listid=1020"
+    },
+    {
+      "id": 100,
+      "kind": "ui.click",
+      "timestamp": 1777216202958,
+      "target": {
+        "selector": "#DCC_DetGrd_RT_edtDetMiktar_NBE_t",
+        "score": 100,
+        "source": "primary"
+      },
+      "url": "https://testotomasyon.univera.com.tr:8350/Interface/MobilSatisDagitim/DepoGiris.aspx?DMLType=New&Title=DepoGiris&RK=&MeNo=52860&CK=DepoGiris&DCV=&ATIC=true&listid=1020"
+    },
+    {
+      "id": 101,
+      "kind": "ui.blur",
+      "timestamp": 1777216207808,
+      "target": {
+        "selector": "#DCC_DetGrd_RT_edtDetMiktar_NBE_t",
+        "score": 100,
+        "source": "primary"
+      },
+      "value": "100.00",
+      "url": "https://testotomasyon.univera.com.tr:8350/Interface/MobilSatisDagitim/DepoGiris.aspx?DMLType=New&Title=DepoGiris&RK=&MeNo=52860&CK=DepoGiris&DCV=&ATIC=true&listid=1020"
+    },
+    {
+      "id": 104,
+      "kind": "ui.click",
+      "timestamp": 1777216209095,
+      "target": {
+        "selector": "#DCC_DetGrd_RT_DCC_DetGrdBtnOK",
+        "score": 100,
+        "source": "primary"
+      },
+      "url": "https://testotomasyon.univera.com.tr:8350/Interface/MobilSatisDagitim/DepoGiris.aspx?DMLType=New&Title=DepoGiris&RK=&MeNo=52860&CK=DepoGiris&DCV=&ATIC=true&listid=1020"
+    },
+    {
+      "id": 105,
+      "kind": "ui.blur",
+      "timestamp": 1777216209102,
+      "target": {
+        "selector": "#DCC_DetGrd_RT_DCC_DetGrdBtnOK",
+        "score": 100,
+        "source": "primary"
+      },
+      "value": "Kaydet",
+      "url": "https://testotomasyon.univera.com.tr:8350/Interface/MobilSatisDagitim/DepoGiris.aspx?DMLType=New&Title=DepoGiris&RK=&MeNo=52860&CK=DepoGiris&DCV=&ATIC=true&listid=1020"
+    },
+    {
+      "id": 107,
+      "kind": "ui.click",
+      "timestamp": 1777216211511,
+      "target": {
+        "selector": "#MainNvgxToolbar_Item_0 > span",
+        "score": 100,
+        "source": "primary"
+      },
+      "url": "https://testotomasyon.univera.com.tr:8350/Interface/MobilSatisDagitim/DepoGiris.aspx?DMLType=New&Title=DepoGiris&RK=&MeNo=52860&CK=DepoGiris&DCV=&ATIC=true&listid=1020"
+    },
+    {
+      "id": 108,
+      "kind": "ui.click",
+      "timestamp": 1777216214248,
+      "target": {
+        "selector": "#MainNvgxToolbar_Item_2 > span > i",
+        "score": 100,
+        "source": "primary"
+      },
+      "url": "https://testotomasyon.univera.com.tr:8350/Interface/MobilSatisDagitim/DepoGiris.aspx?DMLType=New&Title=DepoGiris&RK=&MeNo=52860&CK=DepoGiris&DCV=&ATIC=true&listid=1020"
+    },
+    {
+      "id": 109,
+      "kind": "context.switch",
+      "windowLabel": "popup-1",
+      "frameChain": "main",
+      "timestamp": 1777216214273
+    },
+    {
+      "id": 110,
+      "kind": "ui.network_request",
+      "timestamp": 1777216214273,
+      "url": "https://testotomasyon.univera.com.tr:8350/Interface/Lists/ListCommonDML.aspx?listid=1020&__XHROwnerID=XHR&__UwfXHROwnerID=XHR&__DMLType=&__XHREvnKey=&reqSender=ListGrid",
+      "method": "POST"
+    },
+    {
+      "id": 111,
+      "kind": "context.switch",
+      "windowLabel": "main",
+      "frameChain": "main",
+      "timestamp": 1777216214273
+    },
+    {
+      "id": 112,
+      "kind": "ui.network_request",
+      "timestamp": 1777216214273,
+      "url": "https://testotomasyon.univera.com.tr:8350/Interface/Lists/ListCommonDML.aspx?listid=1020&__XHROwnerID=XHR&__UwfXHROwnerID=XHR&__DMLType=&__XHREvnKey=&reqSender=ListGrid",
+      "method": "POST"
+    },
+    {
+      "id": 113,
+      "kind": "context.switch",
+      "windowLabel": "main",
+      "frameChain": "mainRTL",
+      "timestamp": 1777216214391
+    },
+    {
+      "id": 115,
+      "kind": "ui.click",
+      "timestamp": 1777216216537,
+      "target": {
+        "selector": "#NvgxToolbar_Item_0 > span > i",
+        "score": 100,
+        "source": "primary"
+      },
+      "url": "https://testotomasyon.univera.com.tr:8350/Interface/Lists/ListCommonDML.aspx?listid=1020"
+    },
+    {
+      "id": 116,
+      "kind": "context.switch",
+      "windowLabel": "popup-1",
+      "frameChain": "main",
+      "timestamp": 1777216216540
+    },
+    {
+      "id": 117,
+      "kind": "ui.network_request",
+      "timestamp": 1777216216540,
+      "url": "https://testotomasyon.univera.com.tr:8350/Interface/Lists/ListCommonDML.aspx?listid=1020&__XHROwnerID=XHR&__UwfXHROwnerID=XHR&__DMLType=&__XHREvnKey=&reqSender=ListGrid",
+      "method": "POST"
+    },
+    {
+      "id": 118,
+      "kind": "context.switch",
+      "windowLabel": "main",
+      "frameChain": "main",
+      "timestamp": 1777216216540
+    },
+    {
+      "id": 119,
+      "kind": "ui.network_request",
+      "timestamp": 1777216216540,
+      "url": "https://testotomasyon.univera.com.tr:8350/Interface/Lists/ListCommonDML.aspx?listid=1020&__XHROwnerID=XHR&__UwfXHROwnerID=XHR&__DMLType=&__XHREvnKey=&reqSender=ListGrid",
+      "method": "POST"
+    },
+    {
+      "id": 120,
+      "kind": "context.switch",
+      "windowLabel": "main",
+      "frameChain": "mainRTL",
+      "timestamp": 1777216216651
+    }
+  ]
+}

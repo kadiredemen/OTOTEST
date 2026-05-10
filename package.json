@@ -1,0 +1,25 @@
+{
+  "name": "ototest",
+  "version": "1.0.0",
+  "description": "Deterministik Playwright test üretici",
+  "type": "commonjs",
+  "scripts": {
+    "build": "node builder/code-builder.js --all",
+    "build:one": "node builder/code-builder.js",
+    "plan": "node builder/intent-planner.js",
+    "plan:ai": "node builder/intent-planner.js --ai",
+    "normalize": "node normalizer/normalize.js",
+    "normalize:all": "node normalizer/normalize.js --all",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "check:list": "playwright test --list",
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "report": "playwright show-report"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.59.1",
+    "@types/node": "^22.0.0",
+    "dotenv": "^16.0.0",
+    "typescript": "^5.0.0"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "/_global-error/page": "/_global-error",
+  "/_not-found/page": "/_not-found",
+  "/api/recordings/clear-generated/route": "/api/recordings/clear-generated",
+  "/api/recordings/generate/route": "/api/recordings/generate",
+  "/api/recordings/route": "/api/recordings",
+  "/api/recordings/start/route": "/api/recordings/start",
+  "/api/recordings/status/route": "/api/recordings/status",
+  "/api/recordings/stop/route": "/api/recordings/stop",
+  "/api/test-files/code/route": "/api/test-files/code",
+  "/api/test-files/jobs/[id]/route": "/api/test-files/jobs/[id]",
+  "/api/test-files/route": "/api/test-files",
+  "/api/test-files/run/route": "/api/test-files/run",
+  "/page": "/",
+  "/recordings/page": "/recordings",
+  "/test-files/page": "/test-files"
+}

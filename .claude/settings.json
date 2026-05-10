@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(node -e ' *)",
+      "Bash(git -C c:\\\\OTOTEST status)",
+      "Bash(git -C /c/OTOTEST status)",
+      "Bash(gh auth *)",
+      "Bash(git init *)"
+    ]
+  }
+}

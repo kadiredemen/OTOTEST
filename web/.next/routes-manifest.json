@@ -1,0 +1,138 @@
+{
+  "version": 3,
+  "pages404": true,
+  "appType": "app",
+  "caseSensitive": false,
+  "basePath": "",
+  "redirects": [
+    {
+      "source": "/:path+/",
+      "destination": "/:path+",
+      "internal": true,
+      "priority": true,
+      "statusCode": 308,
+      "regex": "^(?:/((?:[^/]+?)(?:/(?:[^/]+?))*))/$"
+    }
+  ],
+  "headers": [],
+  "onMatchHeaders": [],
+  "rewrites": {
+    "beforeFiles": [],
+    "afterFiles": [],
+    "fallback": []
+  },
+  "dynamicRoutes": [
+    {
+      "page": "/api/test-files/jobs/[id]",
+      "regex": "^/api/test\\-files/jobs/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPid": "nxtPid"
+      },
+      "namedRegex": "^/api/test\\-files/jobs/(?<nxtPid>[^/]+?)(?:/)?$"
+    }
+  ],
+  "staticRoutes": [
+    {
+      "page": "/",
+      "regex": "^/(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/(?:/)?$"
+    },
+    {
+      "page": "/_global-error",
+      "regex": "^/_global\\-error(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/_global\\-error(?:/)?$"
+    },
+    {
+      "page": "/_not-found",
+      "regex": "^/_not\\-found(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/_not\\-found(?:/)?$"
+    },
+    {
+      "page": "/api/recordings",
+      "regex": "^/api/recordings(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/recordings(?:/)?$"
+    },
+    {
+      "page": "/api/recordings/clear-generated",
+      "regex": "^/api/recordings/clear\\-generated(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/recordings/clear\\-generated(?:/)?$"
+    },
+    {
+      "page": "/api/recordings/generate",
+      "regex": "^/api/recordings/generate(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/recordings/generate(?:/)?$"
+    },
+    {
+      "page": "/api/recordings/start",
+      "regex": "^/api/recordings/start(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/recordings/start(?:/)?$"
+    },
+    {
+      "page": "/api/recordings/status",
+      "regex": "^/api/recordings/status(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/recordings/status(?:/)?$"
+    },
+    {
+      "page": "/api/recordings/stop",
+      "regex": "^/api/recordings/stop(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/recordings/stop(?:/)?$"
+    },
+    {
+      "page": "/api/test-files",
+      "regex": "^/api/test\\-files(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/test\\-files(?:/)?$"
+    },
+    {
+      "page": "/api/test-files/code",
+      "regex": "^/api/test\\-files/code(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/test\\-files/code(?:/)?$"
+    },
+    {
+      "page": "/api/test-files/run",
+      "regex": "^/api/test\\-files/run(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/test\\-files/run(?:/)?$"
+    },
+    {
+      "page": "/recordings",
+      "regex": "^/recordings(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/recordings(?:/)?$"
+    },
+    {
+      "page": "/test-files",
+      "regex": "^/test\\-files(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/test\\-files(?:/)?$"
+    }
+  ],
+  "dataRoutes": [],
+  "rsc": {
+    "header": "rsc",
+    "varyHeader": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch",
+    "prefetchHeader": "next-router-prefetch",
+    "didPostponeHeader": "x-nextjs-postponed",
+    "contentTypeHeader": "text/x-component",
+    "suffix": ".rsc",
+    "prefetchSegmentHeader": "next-router-segment-prefetch",
+    "prefetchSegmentSuffix": ".segment.rsc",
+    "prefetchSegmentDirSuffix": ".segments",
+    "clientParamParsing": false,
+    "dynamicRSCPrerender": false
+  },
+  "rewriteHeaders": {
+    "pathHeader": "x-nextjs-rewritten-path",
+    "queryHeader": "x-nextjs-rewritten-query"
+  }
+}

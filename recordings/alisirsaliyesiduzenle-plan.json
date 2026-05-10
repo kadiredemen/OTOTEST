@@ -1,0 +1,45 @@
+{
+  "schemaVersion": "1.0",
+  "planner": "ai",
+  "recordingName": "alisirsaliyesiduzenle",
+  "flow": "edit",
+  "operations": [
+    {
+      "op": "openList",
+      "menuCodes": [
+        "1202",
+        "1216",
+        "1218"
+      ],
+      "menuSelectors": [
+        "a > span[data-menu-kod=\"1202\"]",
+        "a > span[data-menu-kod=\"1216\"]",
+        "a > span[data-menu-kod=\"1218\"]"
+      ]
+    },
+    {
+      "op": "openSelectedRecord",
+      "rowSelector": "#ListGrid_R0C0",
+      "actionSelector": "#NvgxToolbar_Item_2 > span"
+    },
+    {
+      "op": "editDetailQuantity",
+      "triggerSelector": "#DCCxGridNvgxToolbar_Item_2 > span",
+      "editorSelector": "#DCC_DetGrd_RT_edtDetMik_NBE_t",
+      "quantitySelector": "#DCC_DetGrd_RT_edtDetMik_NBE_t",
+      "quantity": "102",
+      "lookups": [],
+      "okButtonSelector": "#DCC_DetGrd_RT_DCC_DetGrdBtnOK",
+      "rowProofSelector": "#DCC_DetGrd_R0 > th"
+    },
+    {
+      "op": "saveAndClose",
+      "saveButtonSelector": "#MainNvgxToolbar_Item_1 > span",
+      "closeButtonSelector": "#MainNvgxToolbar_Item_0 > span",
+      "combined": false
+    },
+    {
+      "op": "assertReady"
+    }
+  ]
+}

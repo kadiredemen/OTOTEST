@@ -1,0 +1,67 @@
+{
+  "schemaVersion": "1.0",
+  "planner": "ai",
+  "recordingName": "depogirisislemi",
+  "flow": "create",
+  "operations": [
+    {
+      "op": "openList",
+      "menuCodes": [
+        "1295",
+        "1308",
+        "1309"
+      ],
+      "menuSelectors": [
+        "a > span[data-menu-kod=\"1295\"]",
+        "a > span[data-menu-kod=\"1308\"]",
+        "a > span[data-menu-kod=\"1309\"]"
+      ]
+    },
+    {
+      "op": "openNewRecord",
+      "actionSelector": "#NvgxToolbar_Item_1 > span"
+    },
+    {
+      "op": "selectLookup",
+      "scope": "header",
+      "key": "DistKod",
+      "value": "1001",
+      "inputSelector": "#MCC_edtDistKod_TE_t",
+      "buttonSelector": "#MCC_edtDistKod_TE_b0 > img"
+    },
+    {
+      "op": "selectLookup",
+      "scope": "header",
+      "key": "GirisDepoKod",
+      "value": "18",
+      "inputSelector": "#MCC_edtGirisDepoKodu_NE_t",
+      "buttonSelector": "#MCC_edtGirisDepoKodu_NE_b0 > img"
+    },
+    {
+      "op": "addDetailRow",
+      "triggerSelector": "#DCCxGridNvgxToolbar_Item_1 > span",
+      "editorSelector": "#DCC_DetGrd_RT_edtDetUrunKod_TE_t",
+      "quantitySelector": "#DCC_DetGrd_RT_edtDetMiktar_NBE_t",
+      "quantity": "100.00",
+      "lookups": [
+        {
+          "key": "UrunKod",
+          "value": "TS1_118_2",
+          "inputSelector": "#DCC_DetGrd_RT_edtDetUrunKod_TE_t",
+          "buttonSelector": "#DCC_DetGrd_RT_edtDetUrunKod_TE_b0 > img"
+        }
+      ],
+      "okButtonSelector": "#DCC_DetGrd_RT_DCC_DetGrdBtnOK",
+      "rowProofSelector": "#DCC_DetGrd_R0 > th"
+    },
+    {
+      "op": "saveAndClose",
+      "saveButtonSelector": "#MainNvgxToolbar_Item_0 > span",
+      "closeButtonSelector": "#MainNvgxToolbar_Item_2 > span > i",
+      "combined": false
+    },
+    {
+      "op": "assertReady"
+    }
+  ]
+}

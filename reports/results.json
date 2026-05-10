@@ -1,0 +1,225 @@
+{
+  "config": {
+    "configFile": "C:\\OTOTEST\\playwright.config.ts",
+    "rootDir": "C:/OTOTEST/tests",
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": "C:\\OTOTEST\\tests\\global-setup.ts",
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "C:/OTOTEST/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "C:/OTOTEST/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "html",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "reports/results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.59.1",
+    "workers": 8,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "generated\\musteritanimlama.spec.ts",
+      "file": "generated/musteritanimlama.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Musteritanimlama",
+          "file": "generated/musteritanimlama.spec.ts",
+          "line": 6,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Musteritanimlama akisi",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 35974,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoContain\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // indexOf\u001b[22m\n\nExpected substring: \u001b[32m\"10\"\u001b[39m\nReceived string:    \u001b[31m\"\"\u001b[39m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoContain\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // indexOf\u001b[22m\n\nExpected substring: \u001b[32m\"10\"\u001b[39m\nReceived string:    \u001b[31m\"\"\u001b[39m\n    at MusteritanimlamaPage.selectLookupByKey (C:\\OTOTEST\\pages\\MusteritanimlamaPage.ts:85:34)\n    at C:\\OTOTEST\\tests\\generated\\musteritanimlama.spec.ts:21:7\n    at C:\\OTOTEST\\tests\\generated\\musteritanimlama.spec.ts:20:5",
+                        "location": {
+                          "file": "C:\\OTOTEST\\pages\\MusteritanimlamaPage.ts",
+                          "column": 34,
+                          "line": 85
+                        },
+                        "snippet": "\u001b[90m   at \u001b[39m..\\pages\\MusteritanimlamaPage.ts:85\n\n\u001b[0m \u001b[90m 83 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39museLookupByValueWithFallback(hint\u001b[33m.\u001b[39mbtn\u001b[33m,\u001b[39m hint\u001b[33m.\u001b[39minput\u001b[33m,\u001b[39m hint\u001b[33m.\u001b[39mvalue\u001b[33m,\u001b[39m \u001b[35m8000\u001b[39m\u001b[33m,\u001b[39m key)\u001b[33m;\u001b[39m\n \u001b[90m 84 |\u001b[39m     \u001b[36mconst\u001b[39m actual \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mlocator(hint\u001b[33m.\u001b[39minput)\u001b[33m.\u001b[39mfirst()\u001b[33m.\u001b[39minputValue()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 85 |\u001b[39m     expect(actual\u001b[33m.\u001b[39mtoLowerCase())\u001b[33m.\u001b[39mtoContain(hint\u001b[33m.\u001b[39mvalue\u001b[33m.\u001b[39mtoLowerCase())\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 86 |\u001b[39m   }\n \u001b[90m 87 |\u001b[39m }\n \u001b[90m 88 |\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\OTOTEST\\pages\\MusteritanimlamaPage.ts",
+                            "column": 34,
+                            "line": 85
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoContain\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // indexOf\u001b[22m\n\nExpected substring: \u001b[32m\"10\"\u001b[39m\nReceived string:    \u001b[31m\"\"\u001b[39m\n\n   at ..\\pages\\MusteritanimlamaPage.ts:85\n\n  83 |     await this.useLookupByValueWithFallback(hint.btn, hint.input, hint.value, 8000, key);\n  84 |     const actual = await this.page.locator(hint.input).first().inputValue();\n> 85 |     expect(actual.toLowerCase()).toContain(hint.value.toLowerCase());\n     |                                  ^\n  86 |   }\n  87 | }\n  88 |\n    at MusteritanimlamaPage.selectLookupByKey (C:\\OTOTEST\\pages\\MusteritanimlamaPage.ts:85:34)\n    at C:\\OTOTEST\\tests\\generated\\musteritanimlama.spec.ts:21:7\n    at C:\\OTOTEST\\tests\\generated\\musteritanimlama.spec.ts:20:5"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "steps": [
+                        {
+                          "title": "Listeyi acar",
+                          "duration": 3714
+                        },
+                        {
+                          "title": "Yeni kayit baslatir",
+                          "duration": 3254
+                        },
+                        {
+                          "title": "Distkod lookup secer",
+                          "duration": 8525
+                        },
+                        {
+                          "title": "Txtgrupkod lookup secer",
+                          "duration": 16556,
+                          "error": {
+                            "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoContain\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // indexOf\u001b[22m\n\nExpected substring: \u001b[32m\"10\"\u001b[39m\nReceived string:    \u001b[31m\"\"\u001b[39m",
+                            "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoContain\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // indexOf\u001b[22m\n\nExpected substring: \u001b[32m\"10\"\u001b[39m\nReceived string:    \u001b[31m\"\"\u001b[39m\n    at MusteritanimlamaPage.selectLookupByKey (C:\\OTOTEST\\pages\\MusteritanimlamaPage.ts:85:34)\n    at C:\\OTOTEST\\tests\\generated\\musteritanimlama.spec.ts:21:7\n    at C:\\OTOTEST\\tests\\generated\\musteritanimlama.spec.ts:20:5",
+                            "location": {
+                              "file": "C:\\OTOTEST\\pages\\MusteritanimlamaPage.ts",
+                              "column": 34,
+                              "line": 85
+                            },
+                            "snippet": "\u001b[90m   at \u001b[39m..\\pages\\MusteritanimlamaPage.ts:85\n\n\u001b[0m \u001b[90m 83 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39museLookupByValueWithFallback(hint\u001b[33m.\u001b[39mbtn\u001b[33m,\u001b[39m hint\u001b[33m.\u001b[39minput\u001b[33m,\u001b[39m hint\u001b[33m.\u001b[39mvalue\u001b[33m,\u001b[39m \u001b[35m8000\u001b[39m\u001b[33m,\u001b[39m key)\u001b[33m;\u001b[39m\n \u001b[90m 84 |\u001b[39m     \u001b[36mconst\u001b[39m actual \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mlocator(hint\u001b[33m.\u001b[39minput)\u001b[33m.\u001b[39mfirst()\u001b[33m.\u001b[39minputValue()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 85 |\u001b[39m     expect(actual\u001b[33m.\u001b[39mtoLowerCase())\u001b[33m.\u001b[39mtoContain(hint\u001b[33m.\u001b[39mvalue\u001b[33m.\u001b[39mtoLowerCase())\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 86 |\u001b[39m   }\n \u001b[90m 87 |\u001b[39m }\n \u001b[90m 88 |\u001b[39m\u001b[0m"
+                          }
+                        }
+                      ],
+                      "startTime": "2026-05-10T21:22:24.758Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\OTOTEST\\test-results\\generated-musteritanimlama-a9360-lama-Musteritanimlama-akisi-chromium\\test-failed-2.png"
+                        },
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\OTOTEST\\test-results\\generated-musteritanimlama-a9360-lama-Musteritanimlama-akisi-chromium\\test-failed-1.png"
+                        },
+                        {
+                          "name": "console-log",
+                          "contentType": "text/plain",
+                          "path": "C:\\OTOTEST\\test-results\\generated-musteritanimlama-a9360-lama-Musteritanimlama-akisi-chromium\\attachments\\console-log-7ea6077e5ee729acb344b1ae8cee41d08b6879d4.log"
+                        },
+                        {
+                          "name": "network-log",
+                          "contentType": "application/json",
+                          "path": "C:\\OTOTEST\\test-results\\generated-musteritanimlama-a9360-lama-Musteritanimlama-akisi-chromium\\attachments\\network-log-c99b54d8074e109fa32f8c95de2fb7ca0e8fd92c.json"
+                        },
+                        {
+                          "name": "lookup-audit",
+                          "contentType": "application/json",
+                          "path": "C:\\OTOTEST\\test-results\\generated-musteritanimlama-a9360-lama-Musteritanimlama-akisi-chromium\\attachments\\lookup-audit-33082416dc05c3b7bef1d8f8d1c52c8d3b0d94c8.json"
+                        },
+                        {
+                          "name": "lookup-audit-summary",
+                          "contentType": "text/markdown",
+                          "path": "C:\\OTOTEST\\test-results\\generated-musteritanimlama-a9360-lama-Musteritanimlama-akisi-chromium\\attachments\\lookup-audit-summary-8ac4731f82c83cae6bfbd038a0b0bae1062e2ba0.md"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "C:\\OTOTEST\\test-results\\generated-musteritanimlama-a9360-lama-Musteritanimlama-akisi-chromium\\video-1.webm"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "C:\\OTOTEST\\test-results\\generated-musteritanimlama-a9360-lama-Musteritanimlama-akisi-chromium\\video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "C:\\OTOTEST\\test-results\\generated-musteritanimlama-a9360-lama-Musteritanimlama-akisi-chromium\\error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "C:\\OTOTEST\\test-results\\generated-musteritanimlama-a9360-lama-Musteritanimlama-akisi-chromium\\trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "C:\\OTOTEST\\pages\\MusteritanimlamaPage.ts",
+                        "column": 34,
+                        "line": 85
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "d5ce863b6c20087ec0d7-3ab5fd8c44e769777a95",
+              "file": "generated/musteritanimlama.spec.ts",
+              "line": 7,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-05-10T21:22:18.281Z",
+    "duration": 43496.886,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}
