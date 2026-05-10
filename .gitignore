@@ -7,3 +7,5 @@ playwright-report/
 .env.local
 web/.next/
 .claude/
+auth/user.json
+reports/
