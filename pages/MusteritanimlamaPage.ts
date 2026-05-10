@@ -6,7 +6,7 @@ export class MusteritanimlamaPage extends BasePage {
   private readonly lookupMap = new Map<string, { input: string; btn: string; value: string }>([
     ['DistKod', { input: '#igtxtedtMustKod_TE', btn: '', value: 'MK0001' }],
     ['TXTGRUPKOD', { input: '#TABCtrl_WT__ctl0_WGB_Gruplamalar_edtGrupKodu_TE_t', btn: '#TABCtrl_WT__ctl0_WGB_Gruplamalar_edtGrupKodu_TE_b0 > img', value: '10' }],
-    ['TXTEKGRUPKOD', { input: '#TABCtrl_WT__ctl0_WGB_Gruplamalar_edtGrupKodu_TE_t', btn: '#TABCtrl_WT__ctl0_WGB_Gruplamalar_edtEkGrupKodu_TE_b0 > img', value: '10' }],
+    ['TXTEKGRUPKOD', { input: '#TABCtrl_WT__ctl0_WGB_Gruplamalar_edtEkGrupKodu_TE_t', btn: '#TABCtrl_WT__ctl0_WGB_Gruplamalar_edtEkGrupKodu_TE_b0 > img', value: '10' }],
   ]);
 
   private readonly S_MENU_0 = 'a > span[data-menu-kod="1077"]';
@@ -17,7 +17,7 @@ export class MusteritanimlamaPage extends BasePage {
   private readonly S_DISTKOD_INPUT = '#igtxtedtMustKod_TE';
   private readonly S_TXTGRUPKOD_INPUT = '#TABCtrl_WT__ctl0_WGB_Gruplamalar_edtGrupKodu_TE_t';
   private readonly S_TXTGRUPKOD_BTN = '#TABCtrl_WT__ctl0_WGB_Gruplamalar_edtGrupKodu_TE_b0 > img';
-  private readonly S_TXTEKGRUPKOD_INPUT = '#TABCtrl_WT__ctl0_WGB_Gruplamalar_edtGrupKodu_TE_t';
+  private readonly S_TXTEKGRUPKOD_INPUT = '#TABCtrl_WT__ctl0_WGB_Gruplamalar_edtEkGrupKodu_TE_t';
   private readonly S_TXTEKGRUPKOD_BTN = '#TABCtrl_WT__ctl0_WGB_Gruplamalar_edtEkGrupKodu_TE_b0 > img';
   private readonly S_SAVE = '#MainNvgxToolbar_Item_1 > span';
 
@@ -94,7 +94,8 @@ export class MusteritanimlamaPage extends BasePage {
     const hint = this.lookupMap.get(key);
     if (!hint) throw new Error(`Lookup bulunamadi: ${key}`);
     await this.useLookupByValueWithFallback(hint.btn, hint.input, hint.value, 8000);
-    const actual = await this.page.locator(hint.input).first().inputValue();
+    const frame = await this.resolveFormFrame(5000);
+    const actual = await frame.locator(hint.input).first().inputValue();
     expect(actual.toLowerCase()).toContain(hint.value.toLowerCase());
   }
 }

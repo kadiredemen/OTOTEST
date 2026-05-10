@@ -155,7 +155,8 @@ export class DepogirisislemiPage extends BasePage {
     const hint = this.lookupMap.get(key);
     if (!hint) throw new Error(`Lookup bulunamadi: ${key}`);
     await this.useLookupByValueWithFallback(hint.btn, hint.input, hint.value, 8000);
-    const actual = await this.page.locator(hint.input).first().inputValue();
+    const frame = await this.resolveFormFrame(5000);
+    const actual = await frame.locator(hint.input).first().inputValue();
     expect(actual.toLowerCase()).toContain(hint.value.toLowerCase());
   }
 }

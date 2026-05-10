@@ -52,7 +52,7 @@
         "windowLabel": "popup-2",
         "frameChain": "main"
       },
-      "ownerSelector": "#TABCtrl_WT__ctl0_WGB_Gruplamalar_edtGrupKodu_TE_t",
+      "ownerSelector": "#TABCtrl_WT__ctl0_WGB_Gruplamalar_edtEkGrupKodu_TE_t",
       "lookupButtonSelector": "#TABCtrl_WT__ctl0_WGB_Gruplamalar_edtEkGrupKodu_TE_b0 > img",
       "lookupButtonSelectorSource": "recorded",
       "fromStep": {

@@ -31,22 +31,12 @@
     },
     {
       "op": "fillField",
-      "selector": "#edtDist_TE_t",
-      "value": "1001"
-    },
-    {
-      "op": "fillField",
       "selector": "#edtUnvan_TE_t",
       "value": "MK0001"
     },
     {
       "op": "fillField",
       "selector": "#TABCtrl_WT__ctl0_WGB_GenelBilgiler_edtKisaAd_TE_t",
-      "value": "MK0001"
-    },
-    {
-      "op": "fillField",
-      "selector": "#TABCtrl_WT__ctl0_WGB_GenelBilgiler_edtIlgiliKisi_TE_t",
       "value": "MK0001"
     },
     {

@@ -13,7 +13,7 @@ async function globalSetup() {
     throw new Error('ERP_USERNAME ve ERP_PASSWORD .env dosyasında tanımlı olmalıdır.');
   }
 
-  const browser = await chromium.launch();
+  const browser = await chromium.launch({ headless: false });
   const context = await browser.newContext();
   const page = await context.newPage();
 

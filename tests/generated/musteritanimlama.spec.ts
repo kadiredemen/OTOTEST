@@ -17,17 +17,11 @@ test.describe('Musteritanimlama', () => {
     await test.step('Distkod lookup secer', async () => {
       await erp.selectLookupByKey('DistKod');
     });
-    await test.step('Dist alanini doldurur', async () => {
-      await erp.fillField('#edtDist_TE_t', '1001');
-    });
     await test.step('Unvan alanini doldurur', async () => {
       await erp.fillField('#edtUnvan_TE_t', 'MK0001');
     });
     await test.step('Kisa Ad alanini doldurur', async () => {
       await erp.fillField('#TABCtrl_WT__ctl0_WGB_GenelBilgiler_edtKisaAd_TE_t', 'MK0001');
-    });
-    await test.step('Ilgili Kisi alanini doldurur', async () => {
-      await erp.fillField('#TABCtrl_WT__ctl0_WGB_GenelBilgiler_edtIlgiliKisi_TE_t', 'MK0001');
     });
     await test.step('Txtgrupkod lookup secer', async () => {
       await erp.selectLookupByKey('TXTGRUPKOD');
