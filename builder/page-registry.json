@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-10T21:42:04.319Z",
+  "generatedAt": "2026-05-10T21:54:57.230Z",
   "pages": [
     {
       "pageId": "list-interface-mobilsatisdagitim-irsaliyealisextdmllist-aspx",
@@ -114,7 +114,7 @@
         {
           "name": "musteritanimlama",
           "flow": "create",
-          "planner": "deterministic",
+          "planner": "ai",
           "planPath": "recordings\\musteritanimlama-plan.json"
         }
       ]

@@ -72,8 +72,16 @@ export class MusteritanimlamaPage extends BasePage {
   async saveAndClose(): Promise<void> {
     const btn = this.page.locator(this.S_SAVE).first();
     await btn.waitFor({ state: 'visible', timeout: 10000 });
-    await btn.click({ force: true });
-    await this.page.waitForEvent('close', { timeout: 15000 }).catch(() => {});
+    await btn.scrollIntoViewIfNeeded().catch(() => {});
+    await btn.hover({ timeout: 2000 }).catch(() => {});
+    for (let attempt = 0; attempt < 4; attempt++) {
+      await btn.click({ force: true });
+      const closed = await this.page.waitForEvent('close', { timeout: 5000 })
+        .then(() => true)
+        .catch(() => false);
+      if (closed || this.page.isClosed()) return;
+    }
+    throw new Error(`Form kapatilamadi: ${this.S_SAVE}`);
   }
 
   async assertReady(): Promise<void> {

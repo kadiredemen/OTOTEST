@@ -1,8 +1,7 @@
 {
   "schemaVersion": "1.0",
-  "planner": "deterministic",
+  "planner": "ai",
   "recordingName": "musteritanimlama",
-  "generatedAt": "2026-05-10T21:41:56.385Z",
   "flow": "create",
   "operations": [
     {
@@ -32,12 +31,22 @@
     },
     {
       "op": "fillField",
+      "selector": "#edtDist_TE_t",
+      "value": "1001"
+    },
+    {
+      "op": "fillField",
       "selector": "#edtUnvan_TE_t",
       "value": "MK0001"
     },
     {
       "op": "fillField",
       "selector": "#TABCtrl_WT__ctl0_WGB_GenelBilgiler_edtKisaAd_TE_t",
+      "value": "MK0001"
+    },
+    {
+      "op": "fillField",
+      "selector": "#TABCtrl_WT__ctl0_WGB_GenelBilgiler_edtIlgiliKisi_TE_t",
       "value": "MK0001"
     },
     {
@@ -53,7 +62,7 @@
       "scope": "header",
       "key": "TXTEKGRUPKOD",
       "value": "10",
-      "inputSelector": "#TABCtrl_WT__ctl0_WGB_Gruplamalar_edtGrupKodu_TE_t",
+      "inputSelector": "#TABCtrl_WT__ctl0_WGB_Gruplamalar_edtEkGrupKodu_TE_t",
       "buttonSelector": "#TABCtrl_WT__ctl0_WGB_Gruplamalar_edtEkGrupKodu_TE_b0 > img"
     },
     {
