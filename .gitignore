@@ -5,3 +5,5 @@ playwright-report/
 *.log
 .env
 .env.local
+web/.next/
+.claude/
