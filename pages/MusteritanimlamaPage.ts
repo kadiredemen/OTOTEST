@@ -1,10 +1,10 @@
 import { expect, Frame, Page } from '@playwright/test';
 import { BasePage } from '../runtime/BasePage';
 
-/** Otomatik uretildi - 2026-05-10 */
+/** Otomatik uretildi - 2026-05-11 */
 export class MusteritanimlamaPage extends BasePage {
   private readonly lookupMap = new Map<string, { input: string; btn: string; value: string }>([
-    ['DistKod', { input: '#igtxtedtMustKod_TE', btn: '', value: 'MK0001' }],
+    ['DistKod', { input: '#edtDist_TE_t', btn: '#edtDist_TE_b0 > img', value: '1001' }],
     ['TXTGRUPKOD', { input: '#TABCtrl_WT__ctl0_WGB_Gruplamalar_edtGrupKodu_TE_t', btn: '#TABCtrl_WT__ctl0_WGB_Gruplamalar_edtGrupKodu_TE_b0 > img', value: '10' }],
     ['TXTEKGRUPKOD', { input: '#TABCtrl_WT__ctl0_WGB_Gruplamalar_edtEkGrupKodu_TE_t', btn: '#TABCtrl_WT__ctl0_WGB_Gruplamalar_edtEkGrupKodu_TE_b0 > img', value: '10' }],
   ]);
@@ -14,7 +14,8 @@ export class MusteritanimlamaPage extends BasePage {
   private readonly S_MENU_2 = 'a > span[data-menu-kod="1079"]';
   private readonly S_LIST_HEADER = '#ListGrid_R0 > th';
   private readonly S_NEW_ACTION = '#NvgxToolbar_Item_1 > span';
-  private readonly S_DISTKOD_INPUT = '#igtxtedtMustKod_TE';
+  private readonly S_DISTKOD_INPUT = '#edtDist_TE_t';
+  private readonly S_DISTKOD_BTN = '#edtDist_TE_b0 > img';
   private readonly S_TXTGRUPKOD_INPUT = '#TABCtrl_WT__ctl0_WGB_Gruplamalar_edtGrupKodu_TE_t';
   private readonly S_TXTGRUPKOD_BTN = '#TABCtrl_WT__ctl0_WGB_Gruplamalar_edtGrupKodu_TE_b0 > img';
   private readonly S_TXTEKGRUPKOD_INPUT = '#TABCtrl_WT__ctl0_WGB_Gruplamalar_edtEkGrupKodu_TE_t';
@@ -37,7 +38,7 @@ export class MusteritanimlamaPage extends BasePage {
 
   private async resolveFormFrame(timeout = 15000): Promise<Frame> {
     this.page = this.getActivePage([/\/Interface\/Lists\/ListCommonDML\.aspx/i]);
-    return this.resolveFrameByAnyVisibleMarker(['#igtxtedtMustKod_TE'], timeout, [/\/Interface\/Lists\/ListCommonDML\.aspx/i]);
+    return this.resolveFrameByAnyVisibleMarker(['#edtDist_TE_t'], timeout, [/\/Interface\/Lists\/ListCommonDML\.aspx/i]);
   }
 
   async openNewRecord(): Promise<void> {

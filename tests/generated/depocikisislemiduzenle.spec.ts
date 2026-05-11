@@ -1,7 +1,7 @@
 import { test } from '../fixtures/base.fixture';
 import { DepocikisislemiPage } from '../../pages/DepocikisislemiPage';
 
-/** Otomatik uretildi - 2026-05-10 */
+/** Otomatik uretildi - 2026-05-11 */
 // Plan: recordings\depocikisislemiduzenle-plan.json
 test.describe('Depocikisislemiduzenle', () => {
   test('Depocikisislemiduzenle akisi', async ({ page }) => {

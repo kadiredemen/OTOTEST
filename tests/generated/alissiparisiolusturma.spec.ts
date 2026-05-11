@@ -1,7 +1,7 @@
 import { test } from '../fixtures/base.fixture';
 import { AlissiparisiPage } from '../../pages/AlissiparisiPage';
 
-/** Otomatik uretildi - 2026-05-10 */
+/** Otomatik uretildi - 2026-05-11 */
 // Plan: recordings\alissiparisiolusturma-plan.json
 test.describe('Alissiparisiolusturma', () => {
   test('Alissiparisiolusturma akisi', async ({ page }) => {

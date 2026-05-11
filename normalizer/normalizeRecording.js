@@ -51,6 +51,7 @@ function sanitizeAction(raw, sourceOrder) {
     if (typeof raw.value === 'string') base.value = raw.value;
     if (typeof raw.key === 'string') base.key = raw.key;
     if (typeof raw.method === 'string') base.method = raw.method;
+    if (typeof raw.postData === 'string') base.postData = raw.postData.slice(0, 20000);
     if (typeof raw.message === 'string') base.message = raw.message;
     if (typeof raw.dialogType === 'string') base.dialogType = raw.dialogType;
     if (typeof raw.from === 'string') base.from = raw.from;
@@ -224,6 +225,7 @@ function toDslSteps(actions) {
         if (action.key !== undefined) step.key = action.key;
         if (action.url) step.url = action.url;
         if (action.method) step.method = action.method;
+        if (action.postData) step.postData = action.postData;
         if (action.message) step.message = action.message;
         if (action.dialogType) step.dialogType = action.dialogType;
         if (action.from) step.from = action.from;
@@ -276,7 +278,24 @@ function candidateScoreForLookupValue(action, lookupKey) {
     const selector = String(action.selector || '').toLowerCase();
     const key = String(lookupKey || '').toLowerCase();
     if (key && selector.includes(key)) score += 40;
-    if (selector.includes('kod')) score += 20;
+
+    // Lookup key'den en anlamlı terimi çıkar:
+    // 1) "Kod"/"Kodu" son eki kaldır  ("TXTEKGRUPKOD" → "TXTEKGRUP")
+    // 2) Bilinen teknik ön ekler kaldır ("TXTEKGRUP" → "EKGRUP")
+    // Böylece "TXTEKGRUPKOD" → "ekgrup" ve edtEkGrupKodu selector ile eşleşir.
+    const knownPrefixes = ['txtlng', 'lngtxt', 'igtxt', 'txt', 'lng', 'igt', 'edt'];
+    let keyTerm = key.replace(/kodu?$/i, '').trim();
+    for (const pfx of knownPrefixes) {
+        if (keyTerm.startsWith(pfx) && keyTerm.length > pfx.length + 2) {
+            keyTerm = keyTerm.slice(pfx.length);
+            break;
+        }
+    }
+    if (keyTerm.length > 2 && selector.includes(keyTerm)) score += 30;
+
+    // "kod" genel bonusu: yalnızca keyTerm "kod" içermiyorsa sayılsın
+    if (selector.includes('kod') && !keyTerm.includes('kod')) score += 8;
+
     if (selector.includes('urun') || selector.includes('must') || selector.includes('dist')) score += 8;
 
     return score;
@@ -654,6 +673,19 @@ function isMainToolbarSelector(selector) {
     return /^#MainNvgxToolbar_Item_\d+/.test(selector);
 }
 
+function isMainNavigationSaveRequest(action) {
+    if (!action || action.actionType !== 'network_request') return false;
+    if (String(action.method || '').toUpperCase() !== 'POST') return false;
+    const url = String(action.url || '');
+    if (!/\/Interface\/Erc\//i.test(url)) return false;
+    try {
+        const parsed = new URL(url);
+        return parsed.searchParams.get('reqSender') === 'MainNvg';
+    } catch {
+        return /[?&]reqSender=MainNvg(?:&|$)/i.test(url);
+    }
+}
+
 /**
  * DML form ana toolbar'ındaki Kaydet ve Kapat butonlarını recording sırasından çıkarır.
  *
@@ -679,6 +711,7 @@ function extractSaveCloseHints(actions) {
     }
 
     const hints = [];
+    const hintedContexts = new Set();
     for (const group of groups.values()) {
         const clicks = group.clicks;
         if (clicks.length === 0) continue;
@@ -710,6 +743,28 @@ function extractSaveCloseHints(actions) {
                 closeClickTimestamp: combined ? null : lastClick.timestamp
             }
         });
+        hintedContexts.add(`${group.windowLabel}::${group.frameChain}`);
+    }
+
+    for (const action of actions) {
+        if (!isMainNavigationSaveRequest(action)) continue;
+        const contextKey = `${action.windowLabel}::${action.frameChain}`;
+        if (hintedContexts.has(contextKey)) continue;
+        hints.push({
+            ownerContext: {
+                windowLabel: action.windowLabel,
+                frameChain: action.frameChain
+            },
+            saveButtonSelector: '#MainNvgxToolbar_Item_1 > span',
+            closeButtonSelector: null,
+            combined: true,
+            source: 'network-fallback',
+            fromSteps: {
+                saveClickTimestamp: action.timestamp,
+                closeClickTimestamp: null
+            }
+        });
+        hintedContexts.add(contextKey);
     }
 
     return hints;

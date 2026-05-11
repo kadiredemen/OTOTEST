@@ -25,19 +25,34 @@
       "op": "selectLookup",
       "scope": "header",
       "key": "DistKod",
-      "value": "MK0001",
-      "inputSelector": "#igtxtedtMustKod_TE",
-      "buttonSelector": null
+      "value": "1001",
+      "inputSelector": "#edtDist_TE_t",
+      "buttonSelector": "#edtDist_TE_b0 > img"
+    },
+    {
+      "op": "fillField",
+      "selector": "#igtxtedtMustKod_TE",
+      "value": "mk001"
     },
     {
       "op": "fillField",
       "selector": "#edtUnvan_TE_t",
-      "value": "MK0001"
+      "value": "mk001"
     },
     {
       "op": "fillField",
       "selector": "#TABCtrl_WT__ctl0_WGB_GenelBilgiler_edtKisaAd_TE_t",
-      "value": "MK0001"
+      "value": "mk001"
+    },
+    {
+      "op": "fillField",
+      "selector": "#TABCtrl_WT__ctl0_WGB_GenelBilgiler_edtIlgiliKisi_TE_t",
+      "value": "mk001"
+    },
+    {
+      "op": "fillField",
+      "selector": "#igtxtTABCtrl_WT__ctl0_WGB_IletisimBilgileri_edtCepTel_ME",
+      "value": "(555)555 55 55"
     },
     {
       "op": "selectLookup",
@@ -54,11 +69,6 @@
       "value": "10",
       "inputSelector": "#TABCtrl_WT__ctl0_WGB_Gruplamalar_edtEkGrupKodu_TE_t",
       "buttonSelector": "#TABCtrl_WT__ctl0_WGB_Gruplamalar_edtEkGrupKodu_TE_b0 > img"
-    },
-    {
-      "op": "fillField",
-      "selector": "#igtxtTABCtrl_WT__ctl0_WGB_IletisimBilgileri_edtCepTel_ME",
-      "value": "(555)555 55 55"
     },
     {
       "op": "saveAndClose",

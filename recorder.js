@@ -96,8 +96,15 @@ function normalizeActionV1(action) {
 // ─── Inject Script (browser context) ─────────────────────────────────────────
 const INJECT_SCRIPT = `
 (function() {
-    if (window.__recorderInjected) return;
-    window.__recorderInjected = true;
+    window.__recordedActions = window.__recordedActions || [];
+
+    function bootRecorder() {
+    if (!document || !document.documentElement) {
+        setTimeout(bootRecorder, 25);
+        return;
+    }
+    if (document.__recorderInjected) return;
+    document.__recorderInjected = true;
     window.__recordedActions = window.__recordedActions || [];
 
     // ── Helpers ────────────────────────────────────────────────────────────
@@ -273,9 +280,22 @@ const INJECT_SCRIPT = `
     // yoksa (cross-origin frame) polling buffer'a yaz.
     function pushDirect(info) {
         if (typeof window.__pushRecordedAction === 'function') {
+            flushBufferedActions();
             window.__pushRecordedAction(info);
         } else {
             window.__recordedActions.push(info);
+        }
+    }
+
+    function flushBufferedActions() {
+        if (typeof window.__pushRecordedAction !== 'function') return;
+        const buffered = window.__recordedActions || [];
+        window.__recordedActions = [];
+        for (const item of buffered) {
+            try { window.__pushRecordedAction(item); } catch(e) {
+                window.__recordedActions.push(item);
+                break;
+            }
         }
     }
 
@@ -297,7 +317,7 @@ const INJECT_SCRIPT = `
     // Sadece lookup trigger elemanlarında bunu click olarak kaydet.
     function recordLookupPointerAsClick(target) {
         const el = resolveActionElement(target);
-        if (!el || !el.id || !/_TE_b\\d+$/i.test(el.id)) return;
+        if (!el || !el.id || !/_[A-Za-z]{2}_b\\d+$/i.test(el.id)) return;
         const info = getElementInfo(el);
         info.type = 'click';
         push(info);
@@ -326,11 +346,11 @@ const INJECT_SCRIPT = `
     }, true);
 
     // ── Fill / Select ──────────────────────────────────────────────────────
-    document.addEventListener('change', function(e) {
-        const el = e.target;
-        if (!['INPUT','SELECT','TEXTAREA'].includes(el.tagName)) return;
+    const inputTimers = new WeakMap();
+    function recordInputValue(el, type) {
+        if (!el || !['INPUT','SELECT','TEXTAREA'].includes(el.tagName)) return;
         const info = getElementInfo(el);
-        info.type = el.tagName === 'SELECT' ? 'select' : 'fill';
+        info.type = type || (el.tagName === 'SELECT' ? 'select' : 'fill');
         info.value = el.type === 'password' ? '***' : (el.value || '');
         if (el.tagName === 'SELECT') {
             const opt = el.options[el.selectedIndex];
@@ -342,6 +362,21 @@ const INJECT_SCRIPT = `
             info.value = el.value;
         }
         push(info);
+    }
+
+    document.addEventListener('change', function(e) {
+        recordInputValue(e.target);
+    }, true);
+
+    document.addEventListener('input', function(e) {
+        const el = e.target;
+        if (!el || !['INPUT','TEXTAREA'].includes(el.tagName)) return;
+        if (el.type === 'password') return;
+        if (inputTimers.has(el)) clearTimeout(inputTimers.get(el));
+        inputTimers.set(el, setTimeout(function() {
+            if (!el.isConnected) return;
+            recordInputValue(el, 'fill');
+        }, 350));
     }, true);
 
     // ── Keyboard ───────────────────────────────────────────────────────────
@@ -501,7 +536,11 @@ const INJECT_SCRIPT = `
     });
     frameObserver.observe(document.documentElement, { childList: true, subtree: true });
 
+    setInterval(flushBufferedActions, 500);
     console.log('[RECORDER] injected → ' + getFrameChain() + ' | ' + window.location.href);
+    }
+
+    bootRecorder();
 })();
 `;
 
@@ -583,6 +622,10 @@ function attachPageListeners(p, label, parentLabel) {
         if (!isWhitelistedBusinessApi(req.url())) return;
         const net = { type: 'network_request', method: req.method(), url: req.url(),
             windowLabel: label, index: ++actionIndex, timestamp: Date.now() };
+        const postData = req.postData();
+        if (typeof postData === 'string' && postData.trim()) {
+            net.postData = postData.slice(0, 20000);
+        }
         actions.push(net);
     });
 
@@ -628,6 +671,10 @@ async function main() {
     }
 
     const context = await browser.newContext({ ignoreHTTPSErrors: true, viewport: null });
+
+    // addInitScript: sayfa scriptlerinden ÖNCE çalışır. Listener'larımız ERP'nin önüne geçer,
+    // ERP'nin stopImmediatePropagation çağrıları artık recorder'ı engelleyemez.
+    await context.addInitScript(INJECT_SCRIPT);
 
     context.on('page', async (newPage) => {
         windowIndex++;

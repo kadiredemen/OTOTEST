@@ -1,7 +1,7 @@
 import { test } from '../fixtures/base.fixture';
 import { MusteritanimlamaPage } from '../../pages/MusteritanimlamaPage';
 
-/** Otomatik uretildi - 2026-05-10 */
+/** Otomatik uretildi - 2026-05-11 */
 // Plan: recordings\musteritanimlama-plan.json
 test.describe('Musteritanimlama', () => {
   test('Musteritanimlama akisi', async ({ page }) => {
@@ -17,20 +17,26 @@ test.describe('Musteritanimlama', () => {
     await test.step('Distkod lookup secer', async () => {
       await erp.selectLookupByKey('DistKod');
     });
+    await test.step('Must Kod alanini doldurur', async () => {
+      await erp.fillField('#igtxtedtMustKod_TE', 'mk001');
+    });
     await test.step('Unvan alanini doldurur', async () => {
-      await erp.fillField('#edtUnvan_TE_t', 'MK0001');
+      await erp.fillField('#edtUnvan_TE_t', 'mk001');
     });
     await test.step('Kisa Ad alanini doldurur', async () => {
-      await erp.fillField('#TABCtrl_WT__ctl0_WGB_GenelBilgiler_edtKisaAd_TE_t', 'MK0001');
+      await erp.fillField('#TABCtrl_WT__ctl0_WGB_GenelBilgiler_edtKisaAd_TE_t', 'mk001');
+    });
+    await test.step('Ilgili Kisi alanini doldurur', async () => {
+      await erp.fillField('#TABCtrl_WT__ctl0_WGB_GenelBilgiler_edtIlgiliKisi_TE_t', 'mk001');
+    });
+    await test.step('Cep Tel alanini doldurur', async () => {
+      await erp.fillField('#igtxtTABCtrl_WT__ctl0_WGB_IletisimBilgileri_edtCepTel_ME', '(555)555 55 55');
     });
     await test.step('Txtgrupkod lookup secer', async () => {
       await erp.selectLookupByKey('TXTGRUPKOD');
     });
     await test.step('Txtekgrupkod lookup secer', async () => {
       await erp.selectLookupByKey('TXTEKGRUPKOD');
-    });
-    await test.step('Cep Tel alanini doldurur', async () => {
-      await erp.fillField('#igtxtTABCtrl_WT__ctl0_WGB_IletisimBilgileri_edtCepTel_ME', '(555)555 55 55');
     });
     await test.step('Kaydeder ve kapatir', async () => {
       await erp.saveAndClose();

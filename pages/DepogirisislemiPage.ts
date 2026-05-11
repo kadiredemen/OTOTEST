@@ -1,7 +1,7 @@
 import { expect, Frame, Page } from '@playwright/test';
 import { BasePage } from '../runtime/BasePage';
 
-/** Otomatik uretildi - 2026-05-10 */
+/** Otomatik uretildi - 2026-05-11 */
 export class DepogirisislemiPage extends BasePage {
   private readonly lookupMap = new Map<string, { input: string; btn: string; value: string }>([
     ['DistKod', { input: '#MCC_edtDistKod_TE_t', btn: '#MCC_edtDistKod_TE_b0 > img', value: '1001' }],
